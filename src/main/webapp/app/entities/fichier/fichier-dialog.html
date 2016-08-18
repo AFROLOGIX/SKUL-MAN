@@ -1,0 +1,136 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myFichierLabel" translate="skulmanApp.fichier.home.createOrEditLabel">Create or edit a Fichier</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.fichier.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.fichier.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.type" for="field_type">Type</label>
+            <input type="text" class="form-control" name="type" id="field_type"
+                    ng-model="vm.fichier.type"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.libelleFr" for="field_libelleFr">Libelle Fr</label>
+            <input type="text" class="form-control" name="libelleFr" id="field_libelleFr"
+                    ng-model="vm.fichier.libelleFr"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.libelleFr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.libelleFr.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.libelleEn" for="field_libelleEn">Libelle En</label>
+            <input type="text" class="form-control" name="libelleEn" id="field_libelleEn"
+                    ng-model="vm.fichier.libelleEn"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.libelleEn.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.libelleEn.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.emplacement" for="field_emplacement">Emplacement</label>
+            <input type="text" class="form-control" name="emplacement" id="field_emplacement"
+                    ng-model="vm.fichier.emplacement"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.emplacement.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.emplacement.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.createBy" for="field_createBy">Create By</label>
+            <input type="text" class="form-control" name="createBy" id="field_createBy"
+                    ng-model="vm.fichier.createBy"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.createBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.createBy.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.updateBy" for="field_updateBy">Update By</label>
+            <input type="text" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.fichier.updateBy"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.updateBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.updateBy.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.createAt" for="field_createAt">Create At</label>
+                <div class="input-group">
+                    <input id="field_createAt" type="text" class="form-control" name="createAt" datetime-picker="{{dateformat}}" ng-model="vm.fichier.createAt" is-open="vm.datePickerOpenStatus.createAt"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createAt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.fichier.updateAt" for="field_updateAt">Update At</label>
+                <div class="input-group">
+                    <input id="field_updateAt" type="text" class="form-control" name="updateAt" datetime-picker="{{dateformat}}" ng-model="vm.fichier.updateAt" is-open="vm.datePickerOpenStatus.updateAt"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateAt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.fichier.agentAdministratif" for="field_agentAdministratif">Agent Administratif</label>
+            <select class="form-control" id="field_agentAdministratif" name="agentAdministratif" ng-model="vm.fichier.agentAdministratif" ng-options="agentAdministratif as agentAdministratif.id for agentAdministratif in vm.agentadministratifs track by agentAdministratif.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.fichier.eleve" for="field_eleve">Eleve</label>
+            <select class="form-control" id="field_eleve" name="eleve" ng-model="vm.fichier.eleve" ng-options="eleve as eleve.id for eleve in vm.eleves track by eleve.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.fichier.enseignant" for="field_enseignant">Enseignant</label>
+            <select class="form-control" id="field_enseignant" name="enseignant" ng-model="vm.fichier.enseignant" ng-options="enseignant as enseignant.id for enseignant in vm.enseignants track by enseignant.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

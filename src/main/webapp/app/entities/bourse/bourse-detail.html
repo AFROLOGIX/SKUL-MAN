@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span translate="skulmanApp.bourse.detail.title">Bourse</span> {{vm.bourse.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.bourse.motif">Motif</span></dt>
+        <dd>
+            <span>{{vm.bourse.motif}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bourse.montant">Montant</span></dt>
+        <dd>
+            <span>{{vm.bourse.montant}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bourse.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.bourse.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bourse.eleve">Eleve</span></dt>
+        <dd>
+            <a ui-sref="eleve-detail({id:vm.bourse.eleve.id})">{{vm.bourse.eleve.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bourse-detail.edit({id:vm.bourse.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

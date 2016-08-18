@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "typeTrancheHoraire" : {
+            "home": {
+                "title": "Type Tranche Horaires",
+                "createLabel": "Create a new Type Tranche Horaire",
+                "createOrEditLabel": "Create or edit a Type Tranche Horaire",
+                "search": "Search for Type Tranche Horaire"
+            },
+            "created": "A new Type Tranche Horaire is created with identifier {{ param }}",
+            "updated": "A Type Tranche Horaire is updated with identifier {{ param }}",
+            "deleted": "A Type Tranche Horaire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Tranche Horaire {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Tranche Horaire"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "heureDeb": "Heure Deb",
+            "heureFin": "Heure Fin"
+        }
+    }
+}

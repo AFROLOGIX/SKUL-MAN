@@ -1,0 +1,25 @@
+{
+    "skulmanApp": {
+        "statutEleve" : {
+            "home": {
+                "title": "StatutEleves",
+                "createLabel": "Créer un nouveau Statut Eleve",
+                "createOrEditLabel": "Créer ou éditer un Statut Eleve",
+                "search": "Recherche pour Statut Eleve"
+            },
+            "created": "Un nouveau Statut Eleve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Statut Eleve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Statut Eleve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Statut Eleve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Statut Eleve"
+            },
+            "redouble": "Redouble",
+            "anneeScolaire": "Annee Scolaire",
+            "eleve": "Eleve",
+            "statut": "Statut"
+        }
+    }
+}

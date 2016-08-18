@@ -1,0 +1,99 @@
+<div>
+    <h2 translate="skulmanApp.fichier.home.title">Fichiers</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="fichier.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.fichier.home.createLabel">
+                        Create new Fichier
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.fichier.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.fichier.type">Type</span></th>
+                    <th><span translate="skulmanApp.fichier.libelleFr">Libelle Fr</span></th>
+                    <th><span translate="skulmanApp.fichier.libelleEn">Libelle En</span></th>
+                    <th><span translate="skulmanApp.fichier.emplacement">Emplacement</span></th>
+                    <th><span translate="skulmanApp.fichier.createBy">Create By</span></th>
+                    <th><span translate="skulmanApp.fichier.updateBy">Update By</span></th>
+                    <th><span translate="skulmanApp.fichier.createAt">Create At</span></th>
+                    <th><span translate="skulmanApp.fichier.updateAt">Update At</span></th>
+                    <th><span translate="skulmanApp.fichier.agentAdministratif">Agent Administratif</span></th>
+                    <th><span translate="skulmanApp.fichier.eleve">Eleve</span></th>
+                    <th><span translate="skulmanApp.fichier.enseignant">Enseignant</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fichier in vm.fichiers track by fichier.id">
+                    <td><a ui-sref="fichier-detail({id:fichier.id})">{{fichier.id}}</a></td>
+                    <td>{{fichier.type}}</td>
+                    <td>{{fichier.libelleFr}}</td>
+                    <td>{{fichier.libelleEn}}</td>
+                    <td>{{fichier.emplacement}}</td>
+                    <td>{{fichier.createBy}}</td>
+                    <td>{{fichier.updateBy}}</td>
+                    <td>{{fichier.createAt | date:'medium'}}</td>
+                    <td>{{fichier.updateAt | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="agent-administratif-detail({id:fichier.agentAdministratif.id})">{{fichier.agentAdministratif.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="eleve-detail({id:fichier.eleve.id})">{{fichier.eleve.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="enseignant-detail({id:fichier.enseignant.id})">{{fichier.enseignant.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="fichier-detail({id:fichier.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="fichier.edit({id:fichier.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="fichier.delete({id:fichier.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

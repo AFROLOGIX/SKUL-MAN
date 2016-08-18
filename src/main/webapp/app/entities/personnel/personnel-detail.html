@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span translate="skulmanApp.personnel.detail.title">Personnel</span> {{vm.personnel.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.personnel.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.personnel.nom}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.personnel.prenom}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.tel">Tel</span></dt>
+        <dd>
+            <span>{{vm.personnel.tel}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.email">Email</span></dt>
+        <dd>
+            <span>{{vm.personnel.email}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.dateAdmission">Date Admission</span></dt>
+        <dd>
+            <span>{{vm.personnel.dateAdmission | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.isActive">Is Active</span></dt>
+        <dd>
+            <span>{{vm.personnel.isActive}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.adresse">Adresse</span></dt>
+        <dd>
+            <span>{{vm.personnel.adresse}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.utilisateur">Utilisateur</span></dt>
+        <dd>
+            <a ui-sref="utilisateur-detail({id:vm.personnel.utilisateur.id})">{{vm.personnel.utilisateur.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.personnel.typePersonnel">Type Personnel</span></dt>
+        <dd>
+            <a ui-sref="type-personnel-detail({id:vm.personnel.typePersonnel.id})">{{vm.personnel.typePersonnel.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="personnel-detail.edit({id:vm.personnel.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,23 @@
+
+<div>
+    <h2><span translate="skulmanApp.trancheHoraire.detail.title">Tranche Horaire</span> {{vm.trancheHoraire.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.trancheHoraire.typeTrancheHoraire">Type Tranche Horaire</span></dt>
+        <dd>
+            <a ui-sref="type-tranche-horaire-detail({id:vm.trancheHoraire.typeTrancheHoraire.id})">{{vm.trancheHoraire.typeTrancheHoraire.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tranche-horaire-detail.edit({id:vm.trancheHoraire.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

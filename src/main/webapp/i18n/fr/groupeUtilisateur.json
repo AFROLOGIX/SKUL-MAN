@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "groupeUtilisateur" : {
+            "home": {
+                "title": "GroupeUtilisateurs",
+                "createLabel": "Créer un nouveau Groupe Utilisateur",
+                "createOrEditLabel": "Créer ou éditer un Groupe Utilisateur",
+                "search": "Recherche pour Groupe Utilisateur"
+            },
+            "created": "Un nouveau Groupe Utilisateur a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Groupe Utilisateur avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Groupe Utilisateur avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Groupe Utilisateur {{ id }} ?"
+            },
+            "detail": {
+                "title": "Groupe Utilisateur"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

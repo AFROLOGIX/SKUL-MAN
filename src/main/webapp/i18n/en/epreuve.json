@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "epreuve" : {
+            "home": {
+                "title": "Epreuves",
+                "createLabel": "Create a new Epreuve",
+                "createOrEditLabel": "Create or edit a Epreuve",
+                "search": "Search for Epreuve"
+            },
+            "created": "A new Epreuve is created with identifier {{ param }}",
+            "updated": "A Epreuve is updated with identifier {{ param }}",
+            "deleted": "A Epreuve is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Epreuve {{ id }}?"
+            },
+            "detail": {
+                "title": "Epreuve"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "typeEpreuve": "Type Epreuve",
+            "cours": "Cours"
+        }
+    }
+}

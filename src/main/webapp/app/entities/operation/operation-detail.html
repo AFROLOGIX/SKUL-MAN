@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="skulmanApp.operation.detail.title">Operation</span> {{vm.operation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.operation.code">Code</span></dt>
+        <dd>
+            <span>{{vm.operation.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.operation.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.operation.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.operation.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.operation.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.operation.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.operation.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.operation.isCredit">Is Credit</span></dt>
+        <dd>
+            <span>{{vm.operation.isCredit}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.operation.typeOperation">Type Operation</span></dt>
+        <dd>
+            <a ui-sref="type-operation-detail({id:vm.operation.typeOperation.id})">{{vm.operation.typeOperation.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="operation-detail.edit({id:vm.operation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

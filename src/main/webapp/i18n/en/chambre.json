@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "chambre" : {
+            "home": {
+                "title": "Chambres",
+                "createLabel": "Create a new Chambre",
+                "createOrEditLabel": "Create or edit a Chambre",
+                "search": "Search for Chambre"
+            },
+            "created": "A new Chambre is created with identifier {{ param }}",
+            "updated": "A Chambre is updated with identifier {{ param }}",
+            "deleted": "A Chambre is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Chambre {{ id }}?"
+            },
+            "detail": {
+                "title": "Chambre"
+            },
+            "code": "Code",
+            "libelle": "Libelle",
+            "nombreMaxPersonne": "Nombre Max Personne",
+            "batiment": "Batiment",
+            "typeChambre": "Type Chambre"
+        }
+    }
+}

@@ -1,0 +1,176 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myParentLabel" translate="skulmanApp.parent.home.createOrEditLabel">Create or edit a Parent</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.parent.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.parent.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.nomCompletPere" for="field_nomCompletPere">Nom Complet Pere</label>
+            <input type="text" class="form-control" name="nomCompletPere" id="field_nomCompletPere"
+                    ng-model="vm.parent.nomCompletPere"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.nomCompletPere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nomCompletPere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.nomCompletMere" for="field_nomCompletMere">Nom Complet Mere</label>
+            <input type="text" class="form-control" name="nomCompletMere" id="field_nomCompletMere"
+                    ng-model="vm.parent.nomCompletMere"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.nomCompletMere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nomCompletMere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.emailPere" for="field_emailPere">Email Pere</label>
+            <input type="text" class="form-control" name="emailPere" id="field_emailPere"
+                    ng-model="vm.parent.emailPere"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.emailPere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.emailPere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.emailMere" for="field_emailMere">Email Mere</label>
+            <input type="text" class="form-control" name="emailMere" id="field_emailMere"
+                    ng-model="vm.parent.emailMere"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.emailMere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.emailMere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.telPere" for="field_telPere">Tel Pere</label>
+            <input type="text" class="form-control" name="telPere" id="field_telPere"
+                    ng-model="vm.parent.telPere"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.telPere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.telPere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.telMere" for="field_telMere">Tel Mere</label>
+            <input type="text" class="form-control" name="telMere" id="field_telMere"
+                    ng-model="vm.parent.telMere"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.telMere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.telMere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.professionPere" for="field_professionPere">Profession Pere</label>
+            <input type="text" class="form-control" name="professionPere" id="field_professionPere"
+                    ng-model="vm.parent.professionPere"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.professionPere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.professionPere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.professionMere" for="field_professionMere">Profession Mere</label>
+            <input type="text" class="form-control" name="professionMere" id="field_professionMere"
+                    ng-model="vm.parent.professionMere"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.professionMere.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.professionMere.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.nomCompletTuteur" for="field_nomCompletTuteur">Nom Complet Tuteur</label>
+            <input type="text" class="form-control" name="nomCompletTuteur" id="field_nomCompletTuteur"
+                    ng-model="vm.parent.nomCompletTuteur"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.nomCompletTuteur.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nomCompletTuteur.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.emailTuteur" for="field_emailTuteur">Email Tuteur</label>
+            <input type="text" class="form-control" name="emailTuteur" id="field_emailTuteur"
+                    ng-model="vm.parent.emailTuteur"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.emailTuteur.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.emailTuteur.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.telTuteur" for="field_telTuteur">Tel Tuteur</label>
+            <input type="text" class="form-control" name="telTuteur" id="field_telTuteur"
+                    ng-model="vm.parent.telTuteur"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.telTuteur.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.telTuteur.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.parent.professionTuteur" for="field_professionTuteur">Profession Tuteur</label>
+            <input type="text" class="form-control" name="professionTuteur" id="field_professionTuteur"
+                    ng-model="vm.parent.professionTuteur"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.professionTuteur.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.professionTuteur.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.parent.eleve" for="field_eleve">Eleve</label>
+            <select class="form-control" id="field_eleve" name="eleve" ng-model="vm.parent.eleve" ng-options="eleve as eleve.id for eleve in vm.eleves | orderBy:'id' track by eleve.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

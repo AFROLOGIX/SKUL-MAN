@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "typeMoratoire" : {
+            "home": {
+                "title": "Type Moratoires",
+                "createLabel": "Create a new Type Moratoire",
+                "createOrEditLabel": "Create or edit a Type Moratoire",
+                "search": "Search for Type Moratoire"
+            },
+            "created": "A new Type Moratoire is created with identifier {{ param }}",
+            "updated": "A Type Moratoire is updated with identifier {{ param }}",
+            "deleted": "A Type Moratoire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Moratoire {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Moratoire"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

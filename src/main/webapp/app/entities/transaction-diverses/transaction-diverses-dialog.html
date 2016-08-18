@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTransactionDiversesLabel" translate="skulmanApp.transactionDiverses.home.createOrEditLabel">Create or edit a Transaction Diverses</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.transactionDiverses.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.transactionDiverses.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.transactionDiverses.typeUsager" for="field_typeUsager">Type Usager</label>
+            <input type="text" class="form-control" name="typeUsager" id="field_typeUsager"
+                    ng-model="vm.transactionDiverses.typeUsager"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.typeUsager.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.typeUsager.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.transactionDiverses.isCredit" for="field_isCredit">Is Credit</label>
+            <input type="checkbox" class="form-control" name="isCredit" id="field_isCredit"
+                    ng-model="vm.transactionDiverses.isCredit"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.transactionDiverses.usagerId" for="field_usagerId">Usager Id</label>
+            <input type="number" class="form-control" name="usagerId" id="field_usagerId"
+                    ng-model="vm.transactionDiverses.usagerId"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.transactionDiverses.agentAdministratif" for="field_agentAdministratif">Agent Administratif</label>
+            <select class="form-control" id="field_agentAdministratif" name="agentAdministratif" ng-model="vm.transactionDiverses.agentAdministratif" ng-options="agentAdministratif as agentAdministratif.id for agentAdministratif in vm.agentadministratifs | orderBy:'id' track by agentAdministratif.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.transactionDiverses.operation" for="field_operation">Operation</label>
+            <select class="form-control" id="field_operation" name="operation" ng-model="vm.transactionDiverses.operation" ng-options="operation as operation.id for operation in vm.operations | orderBy:'id' track by operation.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

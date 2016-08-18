@@ -1,0 +1,27 @@
+{
+    "skulmanApp": {
+        "typeAbonnementBus" : {
+            "home": {
+                "title": "TypeAbonnementBuses",
+                "createLabel": "Créer un nouveau Type Abonnement Bus",
+                "createOrEditLabel": "Créer ou éditer un Type Abonnement Bus",
+                "search": "Recherche pour Type Abonnement Bus"
+            },
+            "created": "Un nouveau Type Abonnement Bus a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Type Abonnement Bus avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Type Abonnement Bus avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Type Abonnement Bus {{ id }} ?"
+            },
+            "detail": {
+                "title": "Type Abonnement Bus"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "anneeScolaire": "Annee Scolaire",
+            "montantAbonnement": "Montant Abonnement",
+            "dureeAbonnement": "Duree Abonnement"
+        }
+    }
+}

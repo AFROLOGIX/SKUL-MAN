@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "fonctionnalite" : {
+            "home": {
+                "title": "Fonctionnalites",
+                "createLabel": "Créer un nouveau Fonctionnalite",
+                "createOrEditLabel": "Créer ou éditer un Fonctionnalite",
+                "search": "Recherche pour Fonctionnalite"
+            },
+            "created": "Un nouveau Fonctionnalite a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Fonctionnalite avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Fonctionnalite avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Fonctionnalite {{ id }} ?"
+            },
+            "detail": {
+                "title": "Fonctionnalite"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

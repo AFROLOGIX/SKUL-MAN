@@ -1,0 +1,22 @@
+{
+    "skulmanApp": {
+        "formatMatricule" : {
+            "home": {
+                "title": "FormatMatricules",
+                "createLabel": "Créer un nouveau Format Matricule",
+                "createOrEditLabel": "Créer ou éditer un Format Matricule",
+                "search": "Recherche pour Format Matricule"
+            },
+            "created": "Un nouveau Format Matricule a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Format Matricule avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Format Matricule avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Format Matricule {{ id }} ?"
+            },
+            "detail": {
+                "title": "Format Matricule"
+            },
+            "format": "Format"
+        }
+    }
+}

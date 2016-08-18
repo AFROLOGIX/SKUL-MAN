@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span translate="skulmanApp.chambreEleve.detail.title">Chambre Eleve</span> {{vm.chambreEleve.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.chambreEleve.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.chambreEleve.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.chambreEleve.chambre">Chambre</span></dt>
+        <dd>
+            <a ui-sref="chambre-detail({id:vm.chambreEleve.chambre.id})">{{vm.chambreEleve.chambre.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="chambre-eleve-detail.edit({id:vm.chambreEleve.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

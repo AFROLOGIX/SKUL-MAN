@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span translate="skulmanApp.loginConnexion.detail.title">Login Connexion</span> {{vm.loginConnexion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.loginConnexion.role">Role</span></dt>
+        <dd>
+            <span>{{vm.loginConnexion.role}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginConnexion.loginTime">Login Time</span></dt>
+        <dd>
+            <span>{{vm.loginConnexion.loginTime | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginConnexion.status">Status</span></dt>
+        <dd>
+            <span>{{vm.loginConnexion.status}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginConnexion.addressIp">Address Ip</span></dt>
+        <dd>
+            <span>{{vm.loginConnexion.addressIp}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginConnexion.nbEchecs">Nb Echecs</span></dt>
+        <dd>
+            <span>{{vm.loginConnexion.nbEchecs}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginConnexion.dateEchec">Date Echec</span></dt>
+        <dd>
+            <span>{{vm.loginConnexion.dateEchec | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginConnexion.utilisateur">Utilisateur</span></dt>
+        <dd>
+            <a ui-sref="utilisateur-detail({id:vm.loginConnexion.utilisateur.id})">{{vm.loginConnexion.utilisateur.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="login-connexion-detail.edit({id:vm.loginConnexion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

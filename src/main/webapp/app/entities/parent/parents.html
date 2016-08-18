@@ -1,0 +1,99 @@
+<div>
+    <h2 translate="skulmanApp.parent.home.title">Parents</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="parent.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.parent.home.createLabel">
+                        Create new Parent
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.parent.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.parent.nomCompletPere">Nom Complet Pere</span></th>
+                    <th><span translate="skulmanApp.parent.nomCompletMere">Nom Complet Mere</span></th>
+                    <th><span translate="skulmanApp.parent.emailPere">Email Pere</span></th>
+                    <th><span translate="skulmanApp.parent.emailMere">Email Mere</span></th>
+                    <th><span translate="skulmanApp.parent.telPere">Tel Pere</span></th>
+                    <th><span translate="skulmanApp.parent.telMere">Tel Mere</span></th>
+                    <th><span translate="skulmanApp.parent.professionPere">Profession Pere</span></th>
+                    <th><span translate="skulmanApp.parent.professionMere">Profession Mere</span></th>
+                    <th><span translate="skulmanApp.parent.nomCompletTuteur">Nom Complet Tuteur</span></th>
+                    <th><span translate="skulmanApp.parent.emailTuteur">Email Tuteur</span></th>
+                    <th><span translate="skulmanApp.parent.telTuteur">Tel Tuteur</span></th>
+                    <th><span translate="skulmanApp.parent.professionTuteur">Profession Tuteur</span></th>
+                    <th><span translate="skulmanApp.parent.eleve">Eleve</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="parent in vm.parents track by parent.id">
+                    <td><a ui-sref="parent-detail({id:parent.id})">{{parent.id}}</a></td>
+                    <td>{{parent.nomCompletPere}}</td>
+                    <td>{{parent.nomCompletMere}}</td>
+                    <td>{{parent.emailPere}}</td>
+                    <td>{{parent.emailMere}}</td>
+                    <td>{{parent.telPere}}</td>
+                    <td>{{parent.telMere}}</td>
+                    <td>{{parent.professionPere}}</td>
+                    <td>{{parent.professionMere}}</td>
+                    <td>{{parent.nomCompletTuteur}}</td>
+                    <td>{{parent.emailTuteur}}</td>
+                    <td>{{parent.telTuteur}}</td>
+                    <td>{{parent.professionTuteur}}</td>
+                    <td>
+                        <a ui-sref="eleve-detail({id:parent.eleve.id})">{{parent.eleve.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="parent-detail({id:parent.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="parent.edit({id:parent.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="parent.delete({id:parent.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

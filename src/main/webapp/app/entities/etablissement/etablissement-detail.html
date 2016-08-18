@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span translate="skulmanApp.etablissement.detail.title">Etablissement</span> {{vm.etablissement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.etablissement.code">Code</span></dt>
+        <dd>
+            <span>{{vm.etablissement.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.etablissement.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.etablissement.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.dateCreation">Date Creation</span></dt>
+        <dd>
+            <span>{{vm.etablissement.dateCreation | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.titreResponsable">Titre Responsable</span></dt>
+        <dd>
+            <span>{{vm.etablissement.titreResponsable}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.ville">Ville</span></dt>
+        <dd>
+            <span>{{vm.etablissement.ville}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.nomReponsable">Nom Reponsable</span></dt>
+        <dd>
+            <span>{{vm.etablissement.nomReponsable}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.siteWeb">Site Web</span></dt>
+        <dd>
+            <span>{{vm.etablissement.siteWeb}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.cheminLogo">Chemin Logo</span></dt>
+        <dd>
+            <span>{{vm.etablissement.cheminLogo}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.nbTrimestre">Nb Trimestre</span></dt>
+        <dd>
+            <span>{{vm.etablissement.nbTrimestre}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.nbSequence">Nb Sequence</span></dt>
+        <dd>
+            <span>{{vm.etablissement.nbSequence}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.bp">Bp</span></dt>
+        <dd>
+            <span>{{vm.etablissement.bp}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.localisation">Localisation</span></dt>
+        <dd>
+            <span>{{vm.etablissement.localisation}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.tel">Tel</span></dt>
+        <dd>
+            <span>{{vm.etablissement.tel}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.email">Email</span></dt>
+        <dd>
+            <span>{{vm.etablissement.email}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.etablissement.devise">Devise</span></dt>
+        <dd>
+            <span>{{vm.etablissement.devise}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="etablissement-detail.edit({id:vm.etablissement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

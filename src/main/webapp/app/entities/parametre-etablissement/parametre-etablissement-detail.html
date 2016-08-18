@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span translate="skulmanApp.parametreEtablissement.detail.title">Parametre Etablissement</span> {{vm.parametreEtablissement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.parametreEtablissement.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.parametreEtablissement.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parametreEtablissement.activerEnregistrementBulletinNoteBd">Activer Enregistrement Bulletin Note Bd</span></dt>
+        <dd>
+            <span>{{vm.parametreEtablissement.activerEnregistrementBulletinNoteBd}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parametreEtablissement.heureDebCours">Heure Deb Cours</span></dt>
+        <dd>
+            <span>{{vm.parametreEtablissement.heureDebCours | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parametreEtablissement.heureFinCours">Heure Fin Cours</span></dt>
+        <dd>
+            <span>{{vm.parametreEtablissement.heureFinCours | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parametreEtablissement.regime">Regime</span></dt>
+        <dd>
+            <span>{{vm.parametreEtablissement.regime}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="parametre-etablissement-detail.edit({id:vm.parametreEtablissement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

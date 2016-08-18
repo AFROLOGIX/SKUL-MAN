@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="skulmanApp.anneeScolaire.detail.title">Annee Scolaire</span> {{vm.anneeScolaire.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.anneeScolaire.annee">Annee</span></dt>
+        <dd>
+            <span>{{vm.anneeScolaire.annee}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.anneeScolaire.codeAnnee">Code Annee</span></dt>
+        <dd>
+            <span>{{vm.anneeScolaire.codeAnnee}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.anneeScolaire.dateDeb">Date Deb</span></dt>
+        <dd>
+            <span>{{vm.anneeScolaire.dateDeb | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.anneeScolaire.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{vm.anneeScolaire.dateFin | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.anneeScolaire.isActive">Is Active</span></dt>
+        <dd>
+            <span>{{vm.anneeScolaire.isActive}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.anneeScolaire.objectifs">Objectifs</span></dt>
+        <dd>
+            <span>{{vm.anneeScolaire.objectifs}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="annee-scolaire-detail.edit({id:vm.anneeScolaire.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

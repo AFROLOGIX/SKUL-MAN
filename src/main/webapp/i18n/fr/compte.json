@@ -1,0 +1,23 @@
+{
+    "skulmanApp": {
+        "compte" : {
+            "home": {
+                "title": "Comptes",
+                "createLabel": "Créer un nouveau Compte",
+                "createOrEditLabel": "Créer ou éditer un Compte",
+                "search": "Recherche pour Compte"
+            },
+            "created": "Un nouveau Compte a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Compte avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Compte avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Compte {{ id }} ?"
+            },
+            "detail": {
+                "title": "Compte"
+            },
+            "montant": "Montant",
+            "anneeScolaire": "Annee Scolaire"
+        }
+    }
+}

@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span translate="skulmanApp.optionBulletinNote.detail.title">Option Bulletin Note</span> {{vm.optionBulletinNote.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.optionBulletinNote.nomEnseignant">Nom Enseignant</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.nomEnseignant}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.coef">Coef</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.coef}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.noteMin">Note Min</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.noteMin}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.noteMax">Note Max</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.noteMax}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.rangMatiere">Rang Matiere</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.rangMatiere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.moyenneMatiere">Moyenne Matiere</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.moyenneMatiere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.appreciation">Appreciation</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.appreciation}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.moyenneGeneraleClasse">Moyenne Generale Classe</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.moyenneGeneraleClasse}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.groupeMatiere">Groupe Matiere</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.groupeMatiere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.photo">Photo</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.photo}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.totalEleve">Total Eleve</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.totalEleve}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.afficherSanction">Afficher Sanction</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.afficherSanction}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.optionBulletinNote.afficherMatricule">Afficher Matricule</span></dt>
+        <dd>
+            <span>{{vm.optionBulletinNote.afficherMatricule}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="option-bulletin-note-detail.edit({id:vm.optionBulletinNote.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

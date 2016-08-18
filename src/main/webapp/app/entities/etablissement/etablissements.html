@@ -1,0 +1,103 @@
+<div>
+    <h2 translate="skulmanApp.etablissement.home.title">Etablissements</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="etablissement.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.etablissement.home.createLabel">
+                        Create new Etablissement
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.etablissement.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.etablissement.code">Code</span></th>
+                    <th><span translate="skulmanApp.etablissement.libelleFr">Libelle Fr</span></th>
+                    <th><span translate="skulmanApp.etablissement.libelleEn">Libelle En</span></th>
+                    <th><span translate="skulmanApp.etablissement.dateCreation">Date Creation</span></th>
+                    <th><span translate="skulmanApp.etablissement.titreResponsable">Titre Responsable</span></th>
+                    <th><span translate="skulmanApp.etablissement.ville">Ville</span></th>
+                    <th><span translate="skulmanApp.etablissement.nomReponsable">Nom Reponsable</span></th>
+                    <th><span translate="skulmanApp.etablissement.siteWeb">Site Web</span></th>
+                    <th><span translate="skulmanApp.etablissement.cheminLogo">Chemin Logo</span></th>
+                    <th><span translate="skulmanApp.etablissement.nbTrimestre">Nb Trimestre</span></th>
+                    <th><span translate="skulmanApp.etablissement.nbSequence">Nb Sequence</span></th>
+                    <th><span translate="skulmanApp.etablissement.bp">Bp</span></th>
+                    <th><span translate="skulmanApp.etablissement.localisation">Localisation</span></th>
+                    <th><span translate="skulmanApp.etablissement.tel">Tel</span></th>
+                    <th><span translate="skulmanApp.etablissement.email">Email</span></th>
+                    <th><span translate="skulmanApp.etablissement.devise">Devise</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="etablissement in vm.etablissements track by etablissement.id">
+                    <td><a ui-sref="etablissement-detail({id:etablissement.id})">{{etablissement.id}}</a></td>
+                    <td>{{etablissement.code}}</td>
+                    <td>{{etablissement.libelleFr}}</td>
+                    <td>{{etablissement.libelleEn}}</td>
+                        <td>{{etablissement.dateCreation | date:'mediumDate'}}</td>
+                    <td>{{etablissement.titreResponsable}}</td>
+                    <td>{{etablissement.ville}}</td>
+                    <td>{{etablissement.nomReponsable}}</td>
+                    <td>{{etablissement.siteWeb}}</td>
+                    <td>{{etablissement.cheminLogo}}</td>
+                    <td>{{etablissement.nbTrimestre}}</td>
+                    <td>{{etablissement.nbSequence}}</td>
+                    <td>{{etablissement.bp}}</td>
+                    <td>{{etablissement.localisation}}</td>
+                    <td>{{etablissement.tel}}</td>
+                    <td>{{etablissement.email}}</td>
+                    <td>{{etablissement.devise}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="etablissement-detail({id:etablissement.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="etablissement.edit({id:etablissement.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="etablissement.delete({id:etablissement.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

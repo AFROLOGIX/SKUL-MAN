@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "typeEpreuve" : {
+            "home": {
+                "title": "Type Epreuves",
+                "createLabel": "Create a new Type Epreuve",
+                "createOrEditLabel": "Create or edit a Type Epreuve",
+                "search": "Search for Type Epreuve"
+            },
+            "created": "A new Type Epreuve is created with identifier {{ param }}",
+            "updated": "A Type Epreuve is updated with identifier {{ param }}",
+            "deleted": "A Type Epreuve is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Epreuve {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Epreuve"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

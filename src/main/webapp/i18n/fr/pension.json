@@ -1,0 +1,27 @@
+{
+    "skulmanApp": {
+        "pension" : {
+            "home": {
+                "title": "Pensions",
+                "createLabel": "Créer un nouveau Pension",
+                "createOrEditLabel": "Créer ou éditer un Pension",
+                "search": "Recherche pour Pension"
+            },
+            "created": "Un nouveau Pension a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Pension avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Pension avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Pension {{ id }} ?"
+            },
+            "detail": {
+                "title": "Pension"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "numero": "Numero",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin"
+        }
+    }
+}

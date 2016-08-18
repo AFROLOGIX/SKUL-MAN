@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "typeOperation" : {
+            "home": {
+                "title": "TypeOperations",
+                "createLabel": "Créer un nouveau Type Operation",
+                "createOrEditLabel": "Créer ou éditer un Type Operation",
+                "search": "Recherche pour Type Operation"
+            },
+            "created": "Un nouveau Type Operation a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Type Operation avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Type Operation avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Type Operation {{ id }} ?"
+            },
+            "detail": {
+                "title": "Type Operation"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

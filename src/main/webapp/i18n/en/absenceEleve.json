@@ -1,0 +1,30 @@
+{
+    "skulmanApp": {
+        "absenceEleve" : {
+            "home": {
+                "title": "Absence Eleves",
+                "createLabel": "Create a new Absence Eleve",
+                "createOrEditLabel": "Create or edit a Absence Eleve",
+                "search": "Search for Absence Eleve"
+            },
+            "created": "A new Absence Eleve is created with identifier {{ param }}",
+            "updated": "A Absence Eleve is updated with identifier {{ param }}",
+            "deleted": "A Absence Eleve is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Absence Eleve {{ id }}?"
+            },
+            "detail": {
+                "title": "Absence Eleve"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "plageHoraire": "Plage Horaire",
+            "justifiee": "Justifiee",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "jour": "Jour",
+            "eleve": "Eleve"
+        }
+    }
+}

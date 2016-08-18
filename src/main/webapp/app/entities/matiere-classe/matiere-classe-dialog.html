@@ -1,0 +1,66 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMatiereClasseLabel" translate="skulmanApp.matiereClasse.home.createOrEditLabel">Create or edit a Matiere Classe</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.matiereClasse.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.matiereClasse.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.matiereClasse.anneeScolaire" for="field_anneeScolaire">Annee Scolaire</label>
+            <input type="text" class="form-control" name="anneeScolaire" id="field_anneeScolaire"
+                    ng-model="vm.matiereClasse.anneeScolaire"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.anneeScolaire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.anneeScolaire.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.matiereClasse.coef" for="field_coef">Coef</label>
+            <input type="number" class="form-control" name="coef" id="field_coef"
+                    ng-model="vm.matiereClasse.coef"
+                    max="50" />
+            <div ng-show="editForm.coef.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.coef.$error.max" translate="entity.validation.max" translate-value-max="50">
+                    This field cannot be more than 50.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.coef.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.matiereClasse.classe" for="field_classe">Classe</label>
+            <select class="form-control" id="field_classe" name="classe" ng-model="vm.matiereClasse.classe" ng-options="classe as classe.id for classe in vm.classes | orderBy:'id' track by classe.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.matiereClasse.matiere" for="field_matiere">Matiere</label>
+            <select class="form-control" id="field_matiere" name="matiere" ng-model="vm.matiereClasse.matiere" ng-options="matiere as matiere.id for matiere in vm.matieres | orderBy:'id' track by matiere.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

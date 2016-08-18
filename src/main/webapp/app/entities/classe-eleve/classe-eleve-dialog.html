@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClasseEleveLabel" translate="skulmanApp.classeEleve.home.createOrEditLabel">Create or edit a Classe Eleve</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.classeEleve.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.classeEleve.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.classeEleve.anneeScolaire" for="field_anneeScolaire">Annee Scolaire</label>
+            <input type="text" class="form-control" name="anneeScolaire" id="field_anneeScolaire"
+                    ng-model="vm.classeEleve.anneeScolaire"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.anneeScolaire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.anneeScolaire.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.classeEleve.isActive" for="field_isActive">Is Active</label>
+            <input type="checkbox" class="form-control" name="isActive" id="field_isActive"
+                    ng-model="vm.classeEleve.isActive"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.classeEleve.observation" for="field_observation">Observation</label>
+            <input type="text" class="form-control" name="observation" id="field_observation"
+                    ng-model="vm.classeEleve.observation"
+                    ng-maxlength="250" />
+            <div ng-show="editForm.observation.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.observation.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="250">
+                    This field cannot be longer than 250 characters.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.classeEleve.classe" for="field_classe">Classe</label>
+            <select class="form-control" id="field_classe" name="classe" ng-model="vm.classeEleve.classe" ng-options="classe as classe.id for classe in vm.classes | orderBy:'id' track by classe.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.classeEleve.eleve" for="field_eleve">Eleve</label>
+            <select class="form-control" id="field_eleve" name="eleve" ng-model="vm.classeEleve.eleve" ng-options="eleve as eleve.id for eleve in vm.eleves | orderBy:'id' track by eleve.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

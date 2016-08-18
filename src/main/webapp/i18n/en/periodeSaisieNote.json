@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "periodeSaisieNote" : {
+            "home": {
+                "title": "Periode Saisie Notes",
+                "createLabel": "Create a new Periode Saisie Note",
+                "createOrEditLabel": "Create or edit a Periode Saisie Note",
+                "search": "Search for Periode Saisie Note"
+            },
+            "created": "A new Periode Saisie Note is created with identifier {{ param }}",
+            "updated": "A Periode Saisie Note is updated with identifier {{ param }}",
+            "deleted": "A Periode Saisie Note is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Periode Saisie Note {{ id }}?"
+            },
+            "detail": {
+                "title": "Periode Saisie Note"
+            },
+            "typePeriode": "Type Periode",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin",
+            "anneeScolaire": "Annee Scolaire",
+            "isClose": "Is Close"
+        }
+    }
+}

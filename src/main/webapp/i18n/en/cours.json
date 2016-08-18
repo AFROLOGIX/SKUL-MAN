@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "cours" : {
+            "home": {
+                "title": "Cours",
+                "createLabel": "Create a new Cours",
+                "createOrEditLabel": "Create or edit a Cours",
+                "search": "Search for Cours"
+            },
+            "created": "A new Cours is created with identifier {{ param }}",
+            "updated": "A Cours is updated with identifier {{ param }}",
+            "deleted": "A Cours is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Cours {{ id }}?"
+            },
+            "detail": {
+                "title": "Cours"
+            },
+            "code": "Code",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "anneeScolaire": "Annee Scolaire",
+            "matiere": "Matiere",
+            "classe": "Classe",
+            "enseignant": "Enseignant",
+            "epreuve": "Epreuve",
+            "note": "Note"
+        }
+    }
+}

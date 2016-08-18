@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="skulmanApp.vacation.detail.title">Vacation</span> {{vm.vacation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.vacation.type">Type</span></dt>
+        <dd>
+            <span>{{vm.vacation.type}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.vacation.date">Date</span></dt>
+        <dd>
+            <span>{{vm.vacation.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.vacation.periode">Periode</span></dt>
+        <dd>
+            <span>{{vm.vacation.periode}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.vacation.classe">Classe</span></dt>
+        <dd>
+            <span>{{vm.vacation.classe}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.vacation.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.vacation.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.vacation.enseignant">Enseignant</span></dt>
+        <dd>
+            <a ui-sref="enseignant-detail({id:vm.vacation.enseignant.id})">{{vm.vacation.enseignant.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="vacation-detail.edit({id:vm.vacation.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

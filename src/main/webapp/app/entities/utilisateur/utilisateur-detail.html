@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span translate="skulmanApp.utilisateur.detail.title">Utilisateur</span> {{vm.utilisateur.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.utilisateur.code">Code</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.pwd">Pwd</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.pwd}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.nom}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.prenom}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.tel">Tel</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.tel}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.email">Email</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.email}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.dateConnexion">Date Connexion</span></dt>
+        <dd>
+            <span>{{vm.utilisateur.dateConnexion | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.utilisateur.groupeUtilisateur">Groupe Utilisateur</span></dt>
+        <dd>
+            <a ui-sref="groupe-utilisateur-detail({id:vm.utilisateur.groupeUtilisateur.id})">{{vm.utilisateur.groupeUtilisateur.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="utilisateur-detail.edit({id:vm.utilisateur.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

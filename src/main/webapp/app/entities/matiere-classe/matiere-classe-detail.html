@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span translate="skulmanApp.matiereClasse.detail.title">Matiere Classe</span> {{vm.matiereClasse.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.matiereClasse.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.matiereClasse.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.matiereClasse.coef">Coef</span></dt>
+        <dd>
+            <span>{{vm.matiereClasse.coef}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.matiereClasse.classe">Classe</span></dt>
+        <dd>
+            <a ui-sref="classe-detail({id:vm.matiereClasse.classe.id})">{{vm.matiereClasse.classe.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.matiereClasse.matiere">Matiere</span></dt>
+        <dd>
+            <a ui-sref="matiere-detail({id:vm.matiereClasse.matiere.id})">{{vm.matiereClasse.matiere.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="matiere-classe-detail.edit({id:vm.matiereClasse.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

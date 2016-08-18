@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span translate="skulmanApp.cycle.detail.title">Cycle</span> {{vm.cycle.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.cycle.code">Code</span></dt>
+        <dd>
+            <span>{{vm.cycle.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cycle.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.cycle.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cycle.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.cycle.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cycle.section">Section</span></dt>
+        <dd>
+            <a ui-sref="section-detail({id:vm.cycle.section.id})">{{vm.cycle.section.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="cycle-detail.edit({id:vm.cycle.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

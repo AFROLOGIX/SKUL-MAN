@@ -1,0 +1,25 @@
+{
+    "skulmanApp": {
+        "batiment" : {
+            "home": {
+                "title": "Batiments",
+                "createLabel": "Créer un nouveau Batiment",
+                "createOrEditLabel": "Créer ou éditer un Batiment",
+                "search": "Recherche pour Batiment"
+            },
+            "created": "Un nouveau Batiment a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Batiment avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Batiment avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Batiment {{ id }} ?"
+            },
+            "detail": {
+                "title": "Batiment"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "localisation": "Localisation"
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "skulmanApp": {
+        "trancheHoraire" : {
+            "home": {
+                "title": "TrancheHoraires",
+                "createLabel": "Créer un nouveau Tranche Horaire",
+                "createOrEditLabel": "Créer ou éditer un Tranche Horaire",
+                "search": "Recherche pour Tranche Horaire"
+            },
+            "created": "Un nouveau Tranche Horaire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tranche Horaire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tranche Horaire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tranche Horaire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tranche Horaire"
+            },
+            "typeTrancheHoraire": "Type Tranche Horaire"
+        }
+    }
+}

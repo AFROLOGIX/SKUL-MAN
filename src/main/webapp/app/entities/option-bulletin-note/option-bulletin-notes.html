@@ -1,0 +1,97 @@
+<div>
+    <h2 translate="skulmanApp.optionBulletinNote.home.title">Option Bulletin Notes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="option-bulletin-note.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.optionBulletinNote.home.createLabel">
+                        Create new Option Bulletin Note
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.optionBulletinNote.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.nomEnseignant">Nom Enseignant</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.coef">Coef</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.noteMin">Note Min</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.noteMax">Note Max</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.rangMatiere">Rang Matiere</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.moyenneMatiere">Moyenne Matiere</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.appreciation">Appreciation</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.moyenneGeneraleClasse">Moyenne Generale Classe</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.groupeMatiere">Groupe Matiere</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.photo">Photo</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.totalEleve">Total Eleve</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.afficherSanction">Afficher Sanction</span></th>
+                    <th><span translate="skulmanApp.optionBulletinNote.afficherMatricule">Afficher Matricule</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="optionBulletinNote in vm.optionBulletinNotes track by optionBulletinNote.id">
+                    <td><a ui-sref="option-bulletin-note-detail({id:optionBulletinNote.id})">{{optionBulletinNote.id}}</a></td>
+                    <td>{{optionBulletinNote.nomEnseignant}}</td>
+                    <td>{{optionBulletinNote.coef}}</td>
+                    <td>{{optionBulletinNote.noteMin}}</td>
+                    <td>{{optionBulletinNote.noteMax}}</td>
+                    <td>{{optionBulletinNote.rangMatiere}}</td>
+                    <td>{{optionBulletinNote.moyenneMatiere}}</td>
+                    <td>{{optionBulletinNote.appreciation}}</td>
+                    <td>{{optionBulletinNote.moyenneGeneraleClasse}}</td>
+                    <td>{{optionBulletinNote.groupeMatiere}}</td>
+                    <td>{{optionBulletinNote.photo}}</td>
+                    <td>{{optionBulletinNote.totalEleve}}</td>
+                    <td>{{optionBulletinNote.afficherSanction}}</td>
+                    <td>{{optionBulletinNote.afficherMatricule}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="option-bulletin-note-detail({id:optionBulletinNote.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="option-bulletin-note.edit({id:optionBulletinNote.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="option-bulletin-note.delete({id:optionBulletinNote.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

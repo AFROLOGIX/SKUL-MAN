@@ -1,0 +1,99 @@
+<div>
+    <h2 translate="skulmanApp.deliberation.home.title">Deliberations</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="deliberation.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.deliberation.home.createLabel">
+                        Create new Deliberation
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.deliberation.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.deliberation.motif">Motif</span></th>
+                    <th><span translate="skulmanApp.deliberation.decision">Decision</span></th>
+                    <th><span translate="skulmanApp.deliberation.isActive">Is Active</span></th>
+                    <th><span translate="skulmanApp.deliberation.anneeScolaire">Annee Scolaire</span></th>
+                    <th><span translate="skulmanApp.deliberation.createBy">Create By</span></th>
+                    <th><span translate="skulmanApp.deliberation.updateBy">Update By</span></th>
+                    <th><span translate="skulmanApp.deliberation.createAt">Create At</span></th>
+                    <th><span translate="skulmanApp.deliberation.updateAt">Update At</span></th>
+                    <th><span translate="skulmanApp.deliberation.eleve">Eleve</span></th>
+                    <th><span translate="skulmanApp.deliberation.agentAdministratif">Agent Administratif</span></th>
+                    <th><span translate="skulmanApp.deliberation.enseignant">Enseignant</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="deliberation in vm.deliberations track by deliberation.id">
+                    <td><a ui-sref="deliberation-detail({id:deliberation.id})">{{deliberation.id}}</a></td>
+                    <td>{{deliberation.motif}}</td>
+                    <td>{{deliberation.decision}}</td>
+                    <td>{{deliberation.isActive}}</td>
+                    <td>{{deliberation.anneeScolaire}}</td>
+                    <td>{{deliberation.createBy}}</td>
+                    <td>{{deliberation.updateBy}}</td>
+                    <td>{{deliberation.createAt | date:'medium'}}</td>
+                    <td>{{deliberation.updateAt | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="eleve-detail({id:deliberation.eleve.id})">{{deliberation.eleve.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="agent-administratif-detail({id:deliberation.agentAdministratif.id})">{{deliberation.agentAdministratif.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="enseignant-detail({id:deliberation.enseignant.id})">{{deliberation.enseignant.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="deliberation-detail({id:deliberation.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="deliberation.edit({id:deliberation.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="deliberation.delete({id:deliberation.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

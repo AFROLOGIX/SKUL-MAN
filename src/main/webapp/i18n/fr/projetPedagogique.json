@@ -1,0 +1,28 @@
+{
+    "skulmanApp": {
+        "projetPedagogique" : {
+            "home": {
+                "title": "ProjetPedagogiques",
+                "createLabel": "Créer un nouveau Projet Pedagogique",
+                "createOrEditLabel": "Créer ou éditer un Projet Pedagogique",
+                "search": "Recherche pour Projet Pedagogique"
+            },
+            "created": "Un nouveau Projet Pedagogique a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Projet Pedagogique avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Projet Pedagogique avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Projet Pedagogique {{ id }} ?"
+            },
+            "detail": {
+                "title": "Projet Pedagogique"
+            },
+            "elementProg": "Element Prog",
+            "volumeHoraire": "Volume Horaire",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin",
+            "status": "Status",
+            "classe": "Classe",
+            "enseigant": "Enseigant"
+        }
+    }
+}

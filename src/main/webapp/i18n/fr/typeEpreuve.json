@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "typeEpreuve" : {
+            "home": {
+                "title": "TypeEpreuves",
+                "createLabel": "Créer un nouveau Type Epreuve",
+                "createOrEditLabel": "Créer ou éditer un Type Epreuve",
+                "search": "Recherche pour Type Epreuve"
+            },
+            "created": "Un nouveau Type Epreuve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Type Epreuve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Type Epreuve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Type Epreuve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Type Epreuve"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

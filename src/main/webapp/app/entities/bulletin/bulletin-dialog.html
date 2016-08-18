@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBulletinLabel" translate="skulmanApp.bulletin.home.createOrEditLabel">Create or edit a Bulletin</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bulletin.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bulletin.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.bulletin.moyenne" for="field_moyenne">Moyenne</label>
+            <input type="number" class="form-control" name="moyenne" id="field_moyenne"
+                    ng-model="vm.bulletin.moyenne"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.bulletin.rang" for="field_rang">Rang</label>
+            <input type="number" class="form-control" name="rang" id="field_rang"
+                    ng-model="vm.bulletin.rang"
+                    max="1000" />
+            <div ng-show="editForm.rang.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rang.$error.max" translate="entity.validation.max" translate-value-max="1000">
+                    This field cannot be more than 1000.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.rang.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.bulletin.anneeScolaire" for="field_anneeScolaire">Annee Scolaire</label>
+            <input type="text" class="form-control" name="anneeScolaire" id="field_anneeScolaire"
+                    ng-model="vm.bulletin.anneeScolaire"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.anneeScolaire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.anneeScolaire.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.bulletin.eleve" for="field_eleve">Eleve</label>
+            <select class="form-control" id="field_eleve" name="eleve" ng-model="vm.bulletin.eleve" ng-options="eleve as eleve.id for eleve in vm.eleves | orderBy:'id' track by eleve.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.bulletin.sequence" for="field_sequence">Sequence</label>
+            <select class="form-control" id="field_sequence" name="sequence" ng-model="vm.bulletin.sequence" ng-options="sequence as sequence.id for sequence in vm.sequences | orderBy:'id' track by sequence.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

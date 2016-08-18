@@ -1,0 +1,109 @@
+<div>
+    <h2 translate="skulmanApp.eleve.home.title">Eleves</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="eleve.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.eleve.home.createLabel">
+                        Create new Eleve
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.eleve.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.eleve.matricule">Matricule</span></th>
+                    <th><span translate="skulmanApp.eleve.nom">Nom</span></th>
+                    <th><span translate="skulmanApp.eleve.prenom">Prenom</span></th>
+                    <th><span translate="skulmanApp.eleve.dateNaiss">Date Naiss</span></th>
+                    <th><span translate="skulmanApp.eleve.lieuNaiss">Lieu Naiss</span></th>
+                    <th><span translate="skulmanApp.eleve.sexe">Sexe</span></th>
+                    <th><span translate="skulmanApp.eleve.tel">Tel</span></th>
+                    <th><span translate="skulmanApp.eleve.nationalite">Nationalite</span></th>
+                    <th><span translate="skulmanApp.eleve.email">Email</span></th>
+                    <th><span translate="skulmanApp.eleve.createBy">Create By</span></th>
+                    <th><span translate="skulmanApp.eleve.updateBy">Update By</span></th>
+                    <th><span translate="skulmanApp.eleve.createAt">Create At</span></th>
+                    <th><span translate="skulmanApp.eleve.updateAt">Update At</span></th>
+                    <th><span translate="skulmanApp.eleve.chambreEleve">Chambre Eleve</span></th>
+                    <th><span translate="skulmanApp.eleve.compte">Compte</span></th>
+                    <th><span translate="skulmanApp.eleve.religion">Religion</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="eleve in vm.eleves track by eleve.id">
+                    <td><a ui-sref="eleve-detail({id:eleve.id})">{{eleve.id}}</a></td>
+                    <td>{{eleve.matricule}}</td>
+                    <td>{{eleve.nom}}</td>
+                    <td>{{eleve.prenom}}</td>
+                        <td>{{eleve.dateNaiss | date:'mediumDate'}}</td>
+                    <td>{{eleve.lieuNaiss}}</td>
+                    <td>{{eleve.sexe}}</td>
+                    <td>{{eleve.tel}}</td>
+                    <td>{{eleve.nationalite}}</td>
+                    <td>{{eleve.email}}</td>
+                    <td>{{eleve.createBy}}</td>
+                    <td>{{eleve.updateBy}}</td>
+                    <td>{{eleve.createAt | date:'medium'}}</td>
+                    <td>{{eleve.updateAt | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="chambre-eleve-detail({id:eleve.chambreEleve.id})">{{eleve.chambreEleve.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="compte-detail({id:eleve.compte.id})">{{eleve.compte.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="religion-detail({id:eleve.religion.id})">{{eleve.religion.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="eleve-detail({id:eleve.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="eleve.edit({id:eleve.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="eleve.delete({id:eleve.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

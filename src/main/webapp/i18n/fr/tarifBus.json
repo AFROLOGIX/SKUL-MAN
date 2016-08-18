@@ -1,0 +1,23 @@
+{
+    "skulmanApp": {
+        "tarifBus" : {
+            "home": {
+                "title": "TarifBuses",
+                "createLabel": "Créer un nouveau Tarif Bus",
+                "createOrEditLabel": "Créer ou éditer un Tarif Bus",
+                "search": "Recherche pour Tarif Bus"
+            },
+            "created": "Un nouveau Tarif Bus a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tarif Bus avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tarif Bus avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tarif Bus {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tarif Bus"
+            },
+            "periode": "Periode",
+            "tarif": "Tarif"
+        }
+    }
+}

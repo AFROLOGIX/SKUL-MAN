@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "deliberation" : {
+            "home": {
+                "title": "Deliberations",
+                "createLabel": "Create a new Deliberation",
+                "createOrEditLabel": "Create or edit a Deliberation",
+                "search": "Search for Deliberation"
+            },
+            "created": "A new Deliberation is created with identifier {{ param }}",
+            "updated": "A Deliberation is updated with identifier {{ param }}",
+            "deleted": "A Deliberation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Deliberation {{ id }}?"
+            },
+            "detail": {
+                "title": "Deliberation"
+            },
+            "motif": "Motif",
+            "decision": "Decision",
+            "isActive": "Is Active",
+            "anneeScolaire": "Annee Scolaire",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "eleve": "Eleve",
+            "agentAdministratif": "Agent Administratif",
+            "enseignant": "Enseignant"
+        }
+    }
+}

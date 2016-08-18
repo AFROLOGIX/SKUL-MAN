@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "pause" : {
+            "home": {
+                "title": "Pauses",
+                "createLabel": "Créer un nouveau Pause",
+                "createOrEditLabel": "Créer ou éditer un Pause",
+                "search": "Recherche pour Pause"
+            },
+            "created": "Un nouveau Pause a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Pause avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Pause avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Pause {{ id }} ?"
+            },
+            "detail": {
+                "title": "Pause"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "heureDeb": "Heure Deb",
+            "heureFin": "Heure Fin"
+        }
+    }
+}

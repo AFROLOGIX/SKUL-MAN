@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span translate="skulmanApp.eleve.detail.title">Eleve</span> {{vm.eleve.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.eleve.matricule">Matricule</span></dt>
+        <dd>
+            <span>{{vm.eleve.matricule}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.nom">Nom</span></dt>
+        <dd>
+            <span>{{vm.eleve.nom}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{vm.eleve.prenom}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.dateNaiss">Date Naiss</span></dt>
+        <dd>
+            <span>{{vm.eleve.dateNaiss | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.lieuNaiss">Lieu Naiss</span></dt>
+        <dd>
+            <span>{{vm.eleve.lieuNaiss}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.sexe">Sexe</span></dt>
+        <dd>
+            <span>{{vm.eleve.sexe}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.tel">Tel</span></dt>
+        <dd>
+            <span>{{vm.eleve.tel}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.nationalite">Nationalite</span></dt>
+        <dd>
+            <span>{{vm.eleve.nationalite}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.email">Email</span></dt>
+        <dd>
+            <span>{{vm.eleve.email}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.eleve.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.eleve.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.eleve.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.eleve.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.chambreEleve">Chambre Eleve</span></dt>
+        <dd>
+            <a ui-sref="chambre-eleve-detail({id:vm.eleve.chambreEleve.id})">{{vm.eleve.chambreEleve.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.compte">Compte</span></dt>
+        <dd>
+            <a ui-sref="compte-detail({id:vm.eleve.compte.id})">{{vm.eleve.compte.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.eleve.religion">Religion</span></dt>
+        <dd>
+            <a ui-sref="religion-detail({id:vm.eleve.religion.id})">{{vm.eleve.religion.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="eleve-detail.edit({id:vm.eleve.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

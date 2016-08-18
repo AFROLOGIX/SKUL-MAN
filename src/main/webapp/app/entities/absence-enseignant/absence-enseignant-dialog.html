@@ -1,0 +1,116 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myAbsenceEnseignantLabel" translate="skulmanApp.absenceEnseignant.home.createOrEditLabel">Create or edit a Absence Enseignant</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.absenceEnseignant.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.absenceEnseignant.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.anneeScolaire" for="field_anneeScolaire">Annee Scolaire</label>
+            <input type="text" class="form-control" name="anneeScolaire" id="field_anneeScolaire"
+                    ng-model="vm.absenceEnseignant.anneeScolaire"
+                    required ng-maxlength="100" />
+            <div ng-show="editForm.anneeScolaire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.anneeScolaire.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.anneeScolaire.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.plageHoraire" for="field_plageHoraire">Plage Horaire</label>
+            <input type="text" class="form-control" name="plageHoraire" id="field_plageHoraire"
+                    ng-model="vm.absenceEnseignant.plageHoraire"
+                    ng-maxlength="20" />
+            <div ng-show="editForm.plageHoraire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.plageHoraire.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.justifiee" for="field_justifiee">Justifiee</label>
+            <input type="checkbox" class="form-control" name="justifiee" id="field_justifiee"
+                    ng-model="vm.absenceEnseignant.justifiee"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.createBy" for="field_createBy">Create By</label>
+            <input type="text" class="form-control" name="createBy" id="field_createBy"
+                    ng-model="vm.absenceEnseignant.createBy"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.createBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.createBy.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.updateBy" for="field_updateBy">Update By</label>
+            <input type="text" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.absenceEnseignant.updateBy"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.updateBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.updateBy.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.createAt" for="field_createAt">Create At</label>
+                <div class="input-group">
+                    <input id="field_createAt" type="text" class="form-control" name="createAt" datetime-picker="{{dateformat}}" ng-model="vm.absenceEnseignant.createAt" is-open="vm.datePickerOpenStatus.createAt"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createAt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.absenceEnseignant.updateAt" for="field_updateAt">Update At</label>
+                <div class="input-group">
+                    <input id="field_updateAt" type="text" class="form-control" name="updateAt" datetime-picker="{{dateformat}}" ng-model="vm.absenceEnseignant.updateAt" is-open="vm.datePickerOpenStatus.updateAt"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateAt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.absenceEnseignant.jour" for="field_jour">Jour</label>
+            <select class="form-control" id="field_jour" name="jour" ng-model="vm.absenceEnseignant.jour" ng-options="jour as jour.id for jour in vm.jours | orderBy:'id' track by jour.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.absenceEnseignant.enseignant" for="field_enseignant">Enseignant</label>
+            <select class="form-control" id="field_enseignant" name="enseignant" ng-model="vm.absenceEnseignant.enseignant" ng-options="enseignant as enseignant.id for enseignant in vm.enseignants track by enseignant.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

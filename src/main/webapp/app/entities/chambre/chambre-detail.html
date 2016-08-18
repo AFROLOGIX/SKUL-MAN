@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span translate="skulmanApp.chambre.detail.title">Chambre</span> {{vm.chambre.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.chambre.code">Code</span></dt>
+        <dd>
+            <span>{{vm.chambre.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.chambre.libelle">Libelle</span></dt>
+        <dd>
+            <span>{{vm.chambre.libelle}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.chambre.nombreMaxPersonne">Nombre Max Personne</span></dt>
+        <dd>
+            <span>{{vm.chambre.nombreMaxPersonne}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.chambre.batiment">Batiment</span></dt>
+        <dd>
+            <a ui-sref="batiment-detail({id:vm.chambre.batiment.id})">{{vm.chambre.batiment.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.chambre.typeChambre">Type Chambre</span></dt>
+        <dd>
+            <a ui-sref="type-chambre-detail({id:vm.chambre.typeChambre.id})">{{vm.chambre.typeChambre.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="chambre-detail.edit({id:vm.chambre.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

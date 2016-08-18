@@ -1,0 +1,83 @@
+<div>
+    <h2 translate="skulmanApp.anneeScolaire.home.title">Annee Scolaires</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="annee-scolaire.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.anneeScolaire.home.createLabel">
+                        Create new Annee Scolaire
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.anneeScolaire.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.anneeScolaire.annee">Annee</span></th>
+                    <th><span translate="skulmanApp.anneeScolaire.codeAnnee">Code Annee</span></th>
+                    <th><span translate="skulmanApp.anneeScolaire.dateDeb">Date Deb</span></th>
+                    <th><span translate="skulmanApp.anneeScolaire.dateFin">Date Fin</span></th>
+                    <th><span translate="skulmanApp.anneeScolaire.isActive">Is Active</span></th>
+                    <th><span translate="skulmanApp.anneeScolaire.objectifs">Objectifs</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="anneeScolaire in vm.anneeScolaires track by anneeScolaire.id">
+                    <td><a ui-sref="annee-scolaire-detail({id:anneeScolaire.id})">{{anneeScolaire.id}}</a></td>
+                    <td>{{anneeScolaire.annee}}</td>
+                    <td>{{anneeScolaire.codeAnnee}}</td>
+                        <td>{{anneeScolaire.dateDeb | date:'mediumDate'}}</td>
+                        <td>{{anneeScolaire.dateFin | date:'mediumDate'}}</td>
+                    <td>{{anneeScolaire.isActive}}</td>
+                    <td>{{anneeScolaire.objectifs}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="annee-scolaire-detail({id:anneeScolaire.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="annee-scolaire.edit({id:anneeScolaire.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="annee-scolaire.delete({id:anneeScolaire.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

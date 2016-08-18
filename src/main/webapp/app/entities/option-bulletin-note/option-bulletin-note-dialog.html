@@ -1,0 +1,104 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myOptionBulletinNoteLabel" translate="skulmanApp.optionBulletinNote.home.createOrEditLabel">Create or edit a Option Bulletin Note</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.optionBulletinNote.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.optionBulletinNote.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.nomEnseignant" for="field_nomEnseignant">Nom Enseignant</label>
+            <input type="checkbox" class="form-control" name="nomEnseignant" id="field_nomEnseignant"
+                    ng-model="vm.optionBulletinNote.nomEnseignant"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.coef" for="field_coef">Coef</label>
+            <input type="checkbox" class="form-control" name="coef" id="field_coef"
+                    ng-model="vm.optionBulletinNote.coef"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.noteMin" for="field_noteMin">Note Min</label>
+            <input type="checkbox" class="form-control" name="noteMin" id="field_noteMin"
+                    ng-model="vm.optionBulletinNote.noteMin"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.noteMax" for="field_noteMax">Note Max</label>
+            <input type="checkbox" class="form-control" name="noteMax" id="field_noteMax"
+                    ng-model="vm.optionBulletinNote.noteMax"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.rangMatiere" for="field_rangMatiere">Rang Matiere</label>
+            <input type="checkbox" class="form-control" name="rangMatiere" id="field_rangMatiere"
+                    ng-model="vm.optionBulletinNote.rangMatiere"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.moyenneMatiere" for="field_moyenneMatiere">Moyenne Matiere</label>
+            <input type="checkbox" class="form-control" name="moyenneMatiere" id="field_moyenneMatiere"
+                    ng-model="vm.optionBulletinNote.moyenneMatiere"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.appreciation" for="field_appreciation">Appreciation</label>
+            <input type="checkbox" class="form-control" name="appreciation" id="field_appreciation"
+                    ng-model="vm.optionBulletinNote.appreciation"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.moyenneGeneraleClasse" for="field_moyenneGeneraleClasse">Moyenne Generale Classe</label>
+            <input type="checkbox" class="form-control" name="moyenneGeneraleClasse" id="field_moyenneGeneraleClasse"
+                    ng-model="vm.optionBulletinNote.moyenneGeneraleClasse"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.groupeMatiere" for="field_groupeMatiere">Groupe Matiere</label>
+            <input type="checkbox" class="form-control" name="groupeMatiere" id="field_groupeMatiere"
+                    ng-model="vm.optionBulletinNote.groupeMatiere"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.photo" for="field_photo">Photo</label>
+            <input type="checkbox" class="form-control" name="photo" id="field_photo"
+                    ng-model="vm.optionBulletinNote.photo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.totalEleve" for="field_totalEleve">Total Eleve</label>
+            <input type="checkbox" class="form-control" name="totalEleve" id="field_totalEleve"
+                    ng-model="vm.optionBulletinNote.totalEleve"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.afficherSanction" for="field_afficherSanction">Afficher Sanction</label>
+            <input type="checkbox" class="form-control" name="afficherSanction" id="field_afficherSanction"
+                    ng-model="vm.optionBulletinNote.afficherSanction"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.optionBulletinNote.afficherMatricule" for="field_afficherMatricule">Afficher Matricule</label>
+            <input type="checkbox" class="form-control" name="afficherMatricule" id="field_afficherMatricule"
+                    ng-model="vm.optionBulletinNote.afficherMatricule"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

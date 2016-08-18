@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span translate="skulmanApp.moratoire.detail.title">Moratoire</span> {{vm.moratoire.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.moratoire.motif">Motif</span></dt>
+        <dd>
+            <span>{{vm.moratoire.motif}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.moratoire.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.nouvelleDate">Nouvelle Date</span></dt>
+        <dd>
+            <span>{{vm.moratoire.nouvelleDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.type">Type</span></dt>
+        <dd>
+            <span>{{vm.moratoire.type}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.moratoire.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.moratoire.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.moratoire.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.moratoire.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.typeMoratoire">Type Moratoire</span></dt>
+        <dd>
+            <a ui-sref="type-moratoire-detail({id:vm.moratoire.typeMoratoire.id})">{{vm.moratoire.typeMoratoire.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.moratoire.eleve">Eleve</span></dt>
+        <dd>
+            <a ui-sref="eleve-detail({id:vm.moratoire.eleve.id})">{{vm.moratoire.eleve.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="moratoire-detail.edit({id:vm.moratoire.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

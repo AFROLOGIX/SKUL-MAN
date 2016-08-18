@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span translate="skulmanApp.niveau.detail.title">Niveau</span> {{vm.niveau.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.niveau.code">Code</span></dt>
+        <dd>
+            <span>{{vm.niveau.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.niveau.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.niveau.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.niveau.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.niveau.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.niveau.cycle">Cycle</span></dt>
+        <dd>
+            <a ui-sref="cycle-detail({id:vm.niveau.cycle.id})">{{vm.niveau.cycle.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="niveau-detail.edit({id:vm.niveau.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

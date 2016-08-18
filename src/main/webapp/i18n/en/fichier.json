@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "fichier" : {
+            "home": {
+                "title": "Fichiers",
+                "createLabel": "Create a new Fichier",
+                "createOrEditLabel": "Create or edit a Fichier",
+                "search": "Search for Fichier"
+            },
+            "created": "A new Fichier is created with identifier {{ param }}",
+            "updated": "A Fichier is updated with identifier {{ param }}",
+            "deleted": "A Fichier is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Fichier {{ id }}?"
+            },
+            "detail": {
+                "title": "Fichier"
+            },
+            "type": "Type",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "emplacement": "Emplacement",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "agentAdministratif": "Agent Administratif",
+            "eleve": "Eleve",
+            "enseignant": "Enseignant"
+        }
+    }
+}

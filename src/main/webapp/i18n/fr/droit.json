@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "droit" : {
+            "home": {
+                "title": "Droits",
+                "createLabel": "Créer un nouveau Droit",
+                "createOrEditLabel": "Créer ou éditer un Droit",
+                "search": "Recherche pour Droit"
+            },
+            "created": "Un nouveau Droit a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Droit avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Droit avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Droit {{ id }} ?"
+            },
+            "detail": {
+                "title": "Droit"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "fonctionnalite": "Fonctionnalite",
+            "groupeUtilisateur": "Groupe Utilisateur"
+        }
+    }
+}

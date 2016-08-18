@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "bulletin" : {
+            "home": {
+                "title": "Bulletins",
+                "createLabel": "Créer un nouveau Bulletin",
+                "createOrEditLabel": "Créer ou éditer un Bulletin",
+                "search": "Recherche pour Bulletin"
+            },
+            "created": "Un nouveau Bulletin a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Bulletin avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Bulletin avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Bulletin {{ id }} ?"
+            },
+            "detail": {
+                "title": "Bulletin"
+            },
+            "moyenne": "Moyenne",
+            "rang": "Rang",
+            "anneeScolaire": "Annee Scolaire",
+            "eleve": "Eleve",
+            "sequence": "Sequence"
+        }
+    }
+}

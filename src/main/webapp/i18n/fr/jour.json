@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "jour" : {
+            "home": {
+                "title": "Jours",
+                "createLabel": "Créer un nouveau Jour",
+                "createOrEditLabel": "Créer ou éditer un Jour",
+                "search": "Recherche pour Jour"
+            },
+            "created": "Un nouveau Jour a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Jour avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Jour avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Jour {{ id }} ?"
+            },
+            "detail": {
+                "title": "Jour"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

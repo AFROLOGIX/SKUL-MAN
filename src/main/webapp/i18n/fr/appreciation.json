@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "appreciation" : {
+            "home": {
+                "title": "Appreciations",
+                "createLabel": "Créer un nouveau Appreciation",
+                "createOrEditLabel": "Créer ou éditer un Appreciation",
+                "search": "Recherche pour Appreciation"
+            },
+            "created": "Un nouveau Appreciation a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Appreciation avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Appreciation avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Appreciation {{ id }} ?"
+            },
+            "detail": {
+                "title": "Appreciation"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "minNote": "Min Note",
+            "maxNote": "Max Note"
+        }
+    }
+}

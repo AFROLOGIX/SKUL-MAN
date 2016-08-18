@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "moyenneTableauHonneur" : {
+            "home": {
+                "title": "MoyenneTableauHonneurs",
+                "createLabel": "Créer un nouveau Moyenne Tableau Honneur",
+                "createOrEditLabel": "Créer ou éditer un Moyenne Tableau Honneur",
+                "search": "Recherche pour Moyenne Tableau Honneur"
+            },
+            "created": "Un nouveau Moyenne Tableau Honneur a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Moyenne Tableau Honneur avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Moyenne Tableau Honneur avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Moyenne Tableau Honneur {{ id }} ?"
+            },
+            "detail": {
+                "title": "Moyenne Tableau Honneur"
+            },
+            "conditionTableauHonneur": "Condition Tableau Honneur",
+            "conditionEncouragement": "Condition Encouragement",
+            "conditionFelicitation": "Condition Felicitation"
+        }
+    }
+}

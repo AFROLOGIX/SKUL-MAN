@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span translate="skulmanApp.loginAction.detail.title">Login Action</span> {{vm.loginAction.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.loginAction.action">Action</span></dt>
+        <dd>
+            <span>{{vm.loginAction.action}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginAction.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.loginAction.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginAction.role">Role</span></dt>
+        <dd>
+            <span>{{vm.loginAction.role}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginAction.adresseIp">Adresse Ip</span></dt>
+        <dd>
+            <span>{{vm.loginAction.adresseIp}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.loginAction.utilisateur">Utilisateur</span></dt>
+        <dd>
+            <a ui-sref="utilisateur-detail({id:vm.loginAction.utilisateur.id})">{{vm.loginAction.utilisateur.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="login-action-detail.edit({id:vm.loginAction.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

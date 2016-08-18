@@ -1,0 +1,28 @@
+{
+    "skulmanApp": {
+        "loginConnexion" : {
+            "home": {
+                "title": "LoginConnexions",
+                "createLabel": "Créer un nouveau Login Connexion",
+                "createOrEditLabel": "Créer ou éditer un Login Connexion",
+                "search": "Recherche pour Login Connexion"
+            },
+            "created": "Un nouveau Login Connexion a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Login Connexion avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Login Connexion avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Login Connexion {{ id }} ?"
+            },
+            "detail": {
+                "title": "Login Connexion"
+            },
+            "role": "Role",
+            "loginTime": "Login Time",
+            "status": "Status",
+            "addressIp": "Address Ip",
+            "nbEchecs": "Nb Echecs",
+            "dateEchec": "Date Echec",
+            "utilisateur": "Utilisateur"
+        }
+    }
+}

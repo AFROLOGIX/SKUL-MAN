@@ -1,0 +1,29 @@
+{
+    "skulmanApp": {
+        "sequence" : {
+            "home": {
+                "title": "Sequences",
+                "createLabel": "Create a new Sequence",
+                "createOrEditLabel": "Create or edit a Sequence",
+                "search": "Search for Sequence"
+            },
+            "created": "A new Sequence is created with identifier {{ param }}",
+            "updated": "A Sequence is updated with identifier {{ param }}",
+            "deleted": "A Sequence is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Sequence {{ id }}?"
+            },
+            "detail": {
+                "title": "Sequence"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "anneeScolaire": "Annee Scolaire",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin",
+            "isActive": "Is Active",
+            "trimestre": "Trimestre"
+        }
+    }
+}

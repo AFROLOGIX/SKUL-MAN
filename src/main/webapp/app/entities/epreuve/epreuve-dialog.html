@@ -1,0 +1,50 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEpreuveLabel" translate="skulmanApp.epreuve.home.createOrEditLabel">Create or edit a Epreuve</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.epreuve.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.epreuve.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.epreuve.anneeScolaire" for="field_anneeScolaire">Annee Scolaire</label>
+            <input type="text" class="form-control" name="anneeScolaire" id="field_anneeScolaire"
+                    ng-model="vm.epreuve.anneeScolaire"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.anneeScolaire.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.anneeScolaire.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.epreuve.typeEpreuve" for="field_typeEpreuve">Type Epreuve</label>
+            <select class="form-control" id="field_typeEpreuve" name="typeEpreuve" ng-model="vm.epreuve.typeEpreuve" ng-options="typeEpreuve as typeEpreuve.id for typeEpreuve in vm.typeepreuves | orderBy:'id' track by typeEpreuve.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.epreuve.cours" for="field_cours">Cours</label>
+            <select class="form-control" id="field_cours" name="cours" ng-model="vm.epreuve.cours" ng-options="cours as cours.id for cours in vm.cours track by cours.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

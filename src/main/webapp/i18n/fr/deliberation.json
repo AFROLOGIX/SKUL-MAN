@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "deliberation" : {
+            "home": {
+                "title": "Deliberations",
+                "createLabel": "Créer un nouveau Deliberation",
+                "createOrEditLabel": "Créer ou éditer un Deliberation",
+                "search": "Recherche pour Deliberation"
+            },
+            "created": "Un nouveau Deliberation a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Deliberation avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Deliberation avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Deliberation {{ id }} ?"
+            },
+            "detail": {
+                "title": "Deliberation"
+            },
+            "motif": "Motif",
+            "decision": "Decision",
+            "isActive": "Is Active",
+            "anneeScolaire": "Annee Scolaire",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "eleve": "Eleve",
+            "agentAdministratif": "Agent Administratif",
+            "enseignant": "Enseignant"
+        }
+    }
+}

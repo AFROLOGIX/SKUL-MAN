@@ -1,0 +1,194 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEleveLabel" translate="skulmanApp.eleve.home.createOrEditLabel">Create or edit a Eleve</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.eleve.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.eleve.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.matricule" for="field_matricule">Matricule</label>
+            <input type="text" class="form-control" name="matricule" id="field_matricule"
+                    ng-model="vm.eleve.matricule"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.matricule.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matricule.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.nom" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                    ng-model="vm.eleve.nom"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.nom.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nom.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.prenom" for="field_prenom">Prenom</label>
+            <input type="text" class="form-control" name="prenom" id="field_prenom"
+                    ng-model="vm.eleve.prenom"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.prenom.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prenom.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.dateNaiss" for="field_dateNaiss">Date Naiss</label>
+                <div class="input-group">
+                    <input id="field_dateNaiss" type="text" class="form-control" name="dateNaiss" uib-datepicker-popup="{{dateformat}}" ng-model="vm.eleve.dateNaiss" is-open="vm.datePickerOpenStatus.dateNaiss"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateNaiss')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.lieuNaiss" for="field_lieuNaiss">Lieu Naiss</label>
+            <input type="text" class="form-control" name="lieuNaiss" id="field_lieuNaiss"
+                    ng-model="vm.eleve.lieuNaiss"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.lieuNaiss.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.lieuNaiss.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.sexe" for="field_sexe">Sexe</label>
+            <input type="text" class="form-control" name="sexe" id="field_sexe"
+                    ng-model="vm.eleve.sexe"
+                    ng-maxlength="1" />
+            <div ng-show="editForm.sexe.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sexe.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="1">
+                    This field cannot be longer than 1 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.tel" for="field_tel">Tel</label>
+            <input type="text" class="form-control" name="tel" id="field_tel"
+                    ng-model="vm.eleve.tel"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.tel.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tel.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.nationalite" for="field_nationalite">Nationalite</label>
+            <input type="text" class="form-control" name="nationalite" id="field_nationalite"
+                    ng-model="vm.eleve.nationalite"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.nationalite.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nationalite.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.eleve.email"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.email.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.email.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.createBy" for="field_createBy">Create By</label>
+            <input type="text" class="form-control" name="createBy" id="field_createBy"
+                    ng-model="vm.eleve.createBy"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.createBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.createBy.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.updateBy" for="field_updateBy">Update By</label>
+            <input type="text" class="form-control" name="updateBy" id="field_updateBy"
+                    ng-model="vm.eleve.updateBy"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.updateBy.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.updateBy.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.createAt" for="field_createAt">Create At</label>
+                <div class="input-group">
+                    <input id="field_createAt" type="text" class="form-control" name="createAt" datetime-picker="{{dateformat}}" ng-model="vm.eleve.createAt" is-open="vm.datePickerOpenStatus.createAt"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createAt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.eleve.updateAt" for="field_updateAt">Update At</label>
+                <div class="input-group">
+                    <input id="field_updateAt" type="text" class="form-control" name="updateAt" datetime-picker="{{dateformat}}" ng-model="vm.eleve.updateAt" is-open="vm.datePickerOpenStatus.updateAt"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('updateAt')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.eleve.chambreEleve" for="field_chambreEleve">Chambre Eleve</label>
+            <select class="form-control" id="field_chambreEleve" name="chambreEleve" ng-model="vm.eleve.chambreEleve" ng-options="chambreEleve as chambreEleve.id for chambreEleve in vm.chambreeleves | orderBy:'id' track by chambreEleve.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.eleve.compte" for="field_compte">Compte</label>
+            <select class="form-control" id="field_compte" name="compte" ng-model="vm.eleve.compte" ng-options="compte as compte.id for compte in vm.comptes | orderBy:'id' track by compte.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="skulmanApp.eleve.religion" for="field_religion">Religion</label>
+            <select class="form-control" id="field_religion" name="religion" ng-model="vm.eleve.religion" ng-options="religion as religion.id for religion in vm.religions | orderBy:'id' track by religion.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span translate="skulmanApp.cours.detail.title">Cours</span> {{vm.cours.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.cours.code">Code</span></dt>
+        <dd>
+            <span>{{vm.cours.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cours.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.cours.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cours.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.cours.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cours.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.cours.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cours.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.cours.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cours.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.cours.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.cours.matiere">Matiere</span></dt>
+        <dd>
+            <a ui-sref="matiere-detail({id:vm.cours.matiere.id})">{{vm.cours.matiere.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.cours.classe">Classe</span></dt>
+        <dd>
+            <a ui-sref="classe-detail({id:vm.cours.classe.id})">{{vm.cours.classe.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.cours.enseignant">Enseignant</span></dt>
+        <dd>
+            <a ui-sref="enseignant-detail({id:vm.cours.enseignant.id})">{{vm.cours.enseignant.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="cours-detail.edit({id:vm.cours.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

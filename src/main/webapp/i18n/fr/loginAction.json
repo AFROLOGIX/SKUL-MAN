@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "loginAction" : {
+            "home": {
+                "title": "LoginActions",
+                "createLabel": "Créer un nouveau Login Action",
+                "createOrEditLabel": "Créer ou éditer un Login Action",
+                "search": "Recherche pour Login Action"
+            },
+            "created": "Un nouveau Login Action a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Login Action avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Login Action avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Login Action {{ id }} ?"
+            },
+            "detail": {
+                "title": "Login Action"
+            },
+            "action": "Action",
+            "createBy": "Create By",
+            "role": "Role",
+            "adresseIp": "Adresse Ip",
+            "utilisateur": "Utilisateur"
+        }
+    }
+}

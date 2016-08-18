@@ -1,0 +1,27 @@
+{
+    "skulmanApp": {
+        "regimePension" : {
+            "home": {
+                "title": "RegimePensions",
+                "createLabel": "Créer un nouveau Regime Pension",
+                "createOrEditLabel": "Créer ou éditer un Regime Pension",
+                "search": "Recherche pour Regime Pension"
+            },
+            "created": "Un nouveau Regime Pension a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Regime Pension avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Regime Pension avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Regime Pension {{ id }} ?"
+            },
+            "detail": {
+                "title": "Regime Pension"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "anneeScolaire": "Annee Scolaire",
+            "nbTotalTranches": "Nb Total Tranches",
+            "tranche": "Tranche"
+        }
+    }
+}

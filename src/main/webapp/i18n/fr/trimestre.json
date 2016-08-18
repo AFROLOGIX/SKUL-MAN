@@ -1,0 +1,29 @@
+{
+    "skulmanApp": {
+        "trimestre" : {
+            "home": {
+                "title": "Trimestres",
+                "createLabel": "Créer un nouveau Trimestre",
+                "createOrEditLabel": "Créer ou éditer un Trimestre",
+                "search": "Recherche pour Trimestre"
+            },
+            "created": "Un nouveau Trimestre a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Trimestre avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Trimestre avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Trimestre {{ id }} ?"
+            },
+            "detail": {
+                "title": "Trimestre"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin",
+            "anneeScolaire": "Annee Scolaire",
+            "isActive": "Is Active",
+            "sequence": "Sequence"
+        }
+    }
+}

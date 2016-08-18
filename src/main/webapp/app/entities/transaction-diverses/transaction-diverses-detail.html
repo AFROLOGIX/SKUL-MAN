@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span translate="skulmanApp.transactionDiverses.detail.title">Transaction Diverses</span> {{vm.transactionDiverses.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.transactionDiverses.typeUsager">Type Usager</span></dt>
+        <dd>
+            <span>{{vm.transactionDiverses.typeUsager}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.transactionDiverses.isCredit">Is Credit</span></dt>
+        <dd>
+            <span>{{vm.transactionDiverses.isCredit}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.transactionDiverses.usagerId">Usager Id</span></dt>
+        <dd>
+            <span>{{vm.transactionDiverses.usagerId}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.transactionDiverses.agentAdministratif">Agent Administratif</span></dt>
+        <dd>
+            <a ui-sref="agent-administratif-detail({id:vm.transactionDiverses.agentAdministratif.id})">{{vm.transactionDiverses.agentAdministratif.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.transactionDiverses.operation">Operation</span></dt>
+        <dd>
+            <a ui-sref="operation-detail({id:vm.transactionDiverses.operation.id})">{{vm.transactionDiverses.operation.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="transaction-diverses-detail.edit({id:vm.transactionDiverses.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

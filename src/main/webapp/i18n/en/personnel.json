@@ -1,0 +1,31 @@
+{
+    "skulmanApp": {
+        "personnel" : {
+            "home": {
+                "title": "Personnels",
+                "createLabel": "Create a new Personnel",
+                "createOrEditLabel": "Create or edit a Personnel",
+                "search": "Search for Personnel"
+            },
+            "created": "A new Personnel is created with identifier {{ param }}",
+            "updated": "A Personnel is updated with identifier {{ param }}",
+            "deleted": "A Personnel is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Personnel {{ id }}?"
+            },
+            "detail": {
+                "title": "Personnel"
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "tel": "Tel",
+            "email": "Email",
+            "dateAdmission": "Date Admission",
+            "isActive": "Is Active",
+            "adresse": "Adresse",
+            "utilisateur": "Utilisateur",
+            "typePersonnel": "Type Personnel",
+            "absencePersonnel": "Absence Personnel"
+        }
+    }
+}

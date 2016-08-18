@@ -1,0 +1,81 @@
+<div>
+    <h2 translate="skulmanApp.parametreEtablissement.home.title">Parametre Etablissements</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="parametre-etablissement.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="skulmanApp.parametreEtablissement.home.createLabel">
+                        Create new Parametre Etablissement
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'skulmanApp.parametreEtablissement.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="skulmanApp.parametreEtablissement.anneeScolaire">Annee Scolaire</span></th>
+                    <th><span translate="skulmanApp.parametreEtablissement.activerEnregistrementBulletinNoteBd">Activer Enregistrement Bulletin Note Bd</span></th>
+                    <th><span translate="skulmanApp.parametreEtablissement.heureDebCours">Heure Deb Cours</span></th>
+                    <th><span translate="skulmanApp.parametreEtablissement.heureFinCours">Heure Fin Cours</span></th>
+                    <th><span translate="skulmanApp.parametreEtablissement.regime">Regime</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="parametreEtablissement in vm.parametreEtablissements track by parametreEtablissement.id">
+                    <td><a ui-sref="parametre-etablissement-detail({id:parametreEtablissement.id})">{{parametreEtablissement.id}}</a></td>
+                    <td>{{parametreEtablissement.anneeScolaire}}</td>
+                    <td>{{parametreEtablissement.activerEnregistrementBulletinNoteBd}}</td>
+                    <td>{{parametreEtablissement.heureDebCours | date:'medium'}}</td>
+                    <td>{{parametreEtablissement.heureFinCours | date:'medium'}}</td>
+                    <td>{{parametreEtablissement.regime}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="parametre-etablissement-detail({id:parametreEtablissement.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="parametre-etablissement.edit({id:parametreEtablissement.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="parametre-etablissement.delete({id:parametreEtablissement.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "typePersonnel" : {
+            "home": {
+                "title": "Type Personnels",
+                "createLabel": "Create a new Type Personnel",
+                "createOrEditLabel": "Create or edit a Type Personnel",
+                "search": "Search for Type Personnel"
+            },
+            "created": "A new Type Personnel is created with identifier {{ param }}",
+            "updated": "A Type Personnel is updated with identifier {{ param }}",
+            "deleted": "A Type Personnel is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Personnel {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Personnel"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

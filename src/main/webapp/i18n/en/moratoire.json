@@ -1,0 +1,31 @@
+{
+    "skulmanApp": {
+        "moratoire" : {
+            "home": {
+                "title": "Moratoires",
+                "createLabel": "Create a new Moratoire",
+                "createOrEditLabel": "Create or edit a Moratoire",
+                "search": "Search for Moratoire"
+            },
+            "created": "A new Moratoire is created with identifier {{ param }}",
+            "updated": "A Moratoire is updated with identifier {{ param }}",
+            "deleted": "A Moratoire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Moratoire {{ id }}?"
+            },
+            "detail": {
+                "title": "Moratoire"
+            },
+            "motif": "Motif",
+            "anneeScolaire": "Annee Scolaire",
+            "nouvelleDate": "Nouvelle Date",
+            "type": "Type",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "typeMoratoire": "Type Moratoire",
+            "eleve": "Eleve"
+        }
+    }
+}

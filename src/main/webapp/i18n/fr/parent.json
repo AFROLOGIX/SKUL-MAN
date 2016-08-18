@@ -1,0 +1,34 @@
+{
+    "skulmanApp": {
+        "parent" : {
+            "home": {
+                "title": "Parents",
+                "createLabel": "Créer un nouveau Parent",
+                "createOrEditLabel": "Créer ou éditer un Parent",
+                "search": "Recherche pour Parent"
+            },
+            "created": "Un nouveau Parent a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Parent avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Parent avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Parent {{ id }} ?"
+            },
+            "detail": {
+                "title": "Parent"
+            },
+            "nomCompletPere": "Nom Complet Pere",
+            "nomCompletMere": "Nom Complet Mere",
+            "emailPere": "Email Pere",
+            "emailMere": "Email Mere",
+            "telPere": "Tel Pere",
+            "telMere": "Tel Mere",
+            "professionPere": "Profession Pere",
+            "professionMere": "Profession Mere",
+            "nomCompletTuteur": "Nom Complet Tuteur",
+            "emailTuteur": "Email Tuteur",
+            "telTuteur": "Tel Tuteur",
+            "professionTuteur": "Profession Tuteur",
+            "eleve": "Eleve"
+        }
+    }
+}

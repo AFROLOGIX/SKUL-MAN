@@ -1,0 +1,588 @@
+entity AbsenceEleve{
+anneeScolaire String required maxlength (100),
+plageHoraire String maxlength (20),
+justifiee Boolean,
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity AbsenceEnseignant{
+anneeScolaire String required maxlength (100),
+plageHoraire String maxlength (20),
+justifiee Boolean,
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity AbsencePersonnel{
+anneeScolaire String required maxlength (100),
+periode String maxlength (20),
+justifiee Boolean,
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity AgentAdministratif{
+role String maxlength (50)
+}
+entity AnneeScolaire{
+annee String maxlength (50),
+codeAnnee String maxlength (25),
+dateDeb LocalDate,
+dateFin LocalDate,
+isActive Boolean,
+objectifs String,
+}
+entity Appreciation{
+code String maxlength (50),
+libelleFr String maxlength (100),
+libelleEn String maxlength (100),
+minNote Double,
+maxNote Double,
+}
+entity Batiment{
+code String maxlength (50),
+libelleFr String maxlength (100),
+libelleEn String maxlength (100),
+localisation String maxlength (200),
+}
+entity Bourse{
+motif String maxlength (200),
+montant BigDecimal required,
+anneeScolaire String maxlength (200),
+}
+entity Bulletin{
+moyenne Double,
+rang Integer max (1000),
+anneeScolaire String maxlength (20)
+}
+entity Bus{
+immatriculation String maxlength(50),
+libelleFr String maxlength(200),
+libelleEn String maxlength(200),
+capacite Integer max(120),
+marque String maxlength(50),
+dateAcquisition LocalDate,
+isActive Boolean,
+}
+
+entity Chambre{
+code String maxlength(25),
+libelle String maxlength(100),
+nombreMaxPersonne Integer max(10),
+}
+
+entity ChambreEleve{
+anneeScolaire String maxlength (20),
+}
+
+entity Classe{
+code String maxlength(30),
+libelleFr String maxlength(200),
+libelleEn String maxlength(200),
+}
+entity ClasseEleve{
+anneeScolaire String maxlength (50),
+isActive Boolean,
+observation String maxlength(250),
+}
+entity Compte{
+montant Double,
+anneeScolaire String maxlength(50),
+}
+entity Cours {
+code String maxlength(25),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+anneeScolaire String maxlength(50),
+}
+entity Cycle{
+code String maxlength (20),
+libelleFr String maxlength(200),
+libelleEn String maxlength(200),
+}
+entity Deliberation{
+motif String maxlength(300),
+decision String maxlength(300),
+isActive Boolean,
+anneeScolaire String maxlength(50),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity Droit{
+code String maxlength(50),
+libelleFr String maxlength(200),
+libelleEn String maxlength(200),
+}
+entity TypeEpreuve{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity Eleve{
+matricule String maxlength(50),
+nom String maxlength(100),
+prenom String maxlength(200),
+dateNaiss LocalDate,
+lieuNaiss String maxlength(50),
+sexe String maxlength(1),
+tel String maxlength(50),
+nationalite String maxlength(50),
+email String maxlength (100),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity Enseignant{
+matricule String maxlength(50),
+specialite String maxlength(50),
+}
+entity EnseignantTitulaire{
+anneeScolaire String maxlength(50),
+}
+entity Epreuve{
+anneeScolaire String maxlength(50),
+}
+entity Etablissement{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+dateCreation LocalDate,
+titreResponsable String maxlength(75),
+ville String maxlength(75),
+nomReponsable String maxlength(100),
+siteWeb String maxlength(100),
+cheminLogo String maxlength(200),
+nbTrimestre Integer max(10),
+nbSequence Integer max(10),
+bp String maxlength(100),
+localisation String maxlength(200),
+tel String maxlength(50),
+email String maxlength(100),
+devise String maxlength(100),
+}
+entity Evenement{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+dateDeb LocalDate,
+dateFin LocalDate,
+anneeScolaire String maxlength(50),
+}
+
+
+entity Fichier{
+type String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+emplacement String maxlength(200),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity Fonctionnalite{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity FormatMatricule{
+format String maxlength(200),
+}
+entity GroupeUtilisateur{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity Jour{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity LoginAction{
+action String maxlength(300),
+createBy String maxlength(50),
+role String maxlength(100),
+adresseIp String maxlength(50),
+}
+entity LoginConnexion{
+role String maxlength(50),
+loginTime ZonedDateTime,
+status Boolean,
+addressIp String maxlength(50),
+nbEchecs Integer max (10000),
+dateEchec ZonedDateTime,
+}
+
+entity Matiere{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity MatiereClasse{
+anneeScolaire String maxlength(50),
+coef Integer max(50),
+}
+entity Moratoire{
+motif String maxlength(100),
+anneeScolaire String maxlength(50),
+nouvelleDate LocalDate,
+type String maxlength(50),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity MotifExclusion{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity MoyenneTableauHonneur{
+conditionTableauHonneur Double,
+conditionEncouragement Double,
+conditionFelicitation Double,
+}
+entity Niveau{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity Note{
+note Double,
+deleted Boolean,
+periodicite String maxlength(50),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity Operation{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+anneeScolaire String maxlength(50),
+isCredit Boolean,
+}
+entity OptionBulletinNote{
+nomEnseignant Boolean,
+coef Boolean,
+noteMin Boolean,
+noteMax Boolean,
+rangMatiere Boolean,
+moyenneMatiere Boolean,
+appreciation Boolean,
+moyenneGeneraleClasse Boolean,
+groupeMatiere Boolean,
+photo Boolean,
+totalEleve Boolean,
+afficherSanction Boolean,
+afficherMatricule Boolean,
+}
+entity PaiementPersonnel{
+montant BigDecimal,
+dette BigDecimal,
+anneeScolaire String maxlength(50),
+periode String maxlength(50),
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+entity ParametreEtablissement{
+anneeScolaire String maxlength(50),
+activerEnregistrementBulletinNoteBD Boolean,
+heureDebCours ZonedDateTime,
+heureFinCours ZonedDateTime,
+regime String maxlength(100),
+}
+entity Parent{
+nomCompletPere String maxlength(100),
+nomCompletMere String maxlength(100),
+emailPere String maxlength(100),
+emailMere String maxlength(100),
+telPere String maxlength(20),
+telMere String maxlength(20),
+professionPere String maxlength(100),
+professionMere String maxlength(100),
+nomCompletTuteur String maxlength(100),
+emailTuteur String maxlength(100),
+telTuteur String maxlength(20),
+professionTuteur String maxlength(100),
+}
+entity Pause{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+heureDeb ZonedDateTime,
+heureFin ZonedDateTime,
+}
+entity PeriodeSaisieNote{
+typePeriode String maxlength(50),
+dateDeb LocalDate,
+dateFin LocalDate,
+anneeScolaire String maxlength(50),
+isClose Boolean,
+}
+entity Personnel{
+nom String maxlength(100),
+prenom String maxlength(200),
+tel String maxlength(20),
+email String maxlength(100),
+dateAdmission LocalDate,
+isActive Boolean,
+adresse String maxlength(100),
+}
+entity ProjetPedagogique{
+elementProg String maxlength(100),
+volumeHoraire Double,
+dateDeb LocalDate,
+dateFin LocalDate,
+status Boolean,
+}
+entity RegimePension{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+anneeScolaire String maxlength(50),
+nbTotalTranches Integer max(10),
+}
+entity Religion{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity Salaire{
+typeSalaire String maxlength(200),
+montant Double,
+anneeScolaire String maxlength(50),
+}
+entity Salle{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity Section{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+
+entity Sequence{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+anneeScolaire String maxlength(50),
+dateDeb LocalDate,
+dateFin LocalDate,
+isActive Boolean,
+}
+entity Serie{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity Statut{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+
+
+
+
+entity StatutEleve{
+redouble Boolean,
+anneeScolaire String maxlength(50),
+}
+entity TarifBus{
+periode String maxlength(50),
+tarif Double,
+}
+entity Pension{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+numero Integer max(10),
+dateDeb LocalDate,
+dateFin LocalDate,
+}
+entity TrancheHoraire{
+}
+
+
+
+entity Tranche{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+numero Integer,
+dateDeb LocalDate,
+dateFin LocalDate,
+}
+
+entity TransactionDiverses{
+typeUsager String maxlength(100),
+isCredit Boolean,
+usagerId Integer,
+}
+
+entity Trimestre{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+dateDeb LocalDate,
+dateFin LocalDate,
+anneeScolaire String maxlength(50),
+isActive Boolean,
+}
+entity TypeAbonnementBus{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+anneeScolaire String maxlength(50),
+montantAbonnement Double,
+dureeAbonnement Integer max(7) //en jours
+}
+
+
+entity TypeChambre{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+montant Double,
+}
+
+entity TypeMoratoire{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity TypeOperation{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity TypePersonnel{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+}
+entity TypeTrancheHoraire{
+code String maxlength(50),
+libelleFr String maxlength(200), 
+libelleEn String maxlength(200),
+heureDeb ZonedDateTime,
+heureFin ZonedDateTime,
+}
+entity Utilisateur{
+code String maxlength(50),
+pwd String maxlength(100),
+nom String maxlength(100),
+prenom String maxlength(100),
+tel String maxlength(20),
+email String maxlength(100),
+dateConnexion ZonedDateTime,
+}
+entity Vacation{
+type String maxlength(100),
+date LocalDate,
+periode String maxlength(50),
+classe String maxlength(50),
+anneeScolaire String maxlength(50),
+}
+entity VersementEleve{
+anneeScolaire String maxlength(50),
+periode String maxlength(50),
+montant BigDecimal,
+dette BigDecimal,
+createBy String maxlength (50),
+updateBy String maxlength (50),
+createAt ZonedDateTime,
+updateAt ZonedDateTime,
+}
+
+
+
+relationship OneToOne{
+AbsenceEleve{jour} to Jour,
+AbsenceEnseignant{jour} to Jour,
+AgentAdministratif{salaire} to Salaire,
+VersementEleve{agentAdministratif} to AgentAdministratif,
+PaiementPersonnel{agentAdministratif} to AgentAdministratif,
+TransactionDiverses {agentAdministratif} to AgentAdministratif,
+AbsencePersonnel{jour} to Jour,
+Chambre{batiment} to Batiment,
+Salle{batiment} to Salle,
+Bulletin{eleve} to Eleve,
+Bulletin{sequence} to Sequence,
+Bus{tarifBus} to TarifBus,
+Chambre{typeChambre} to TypeChambre,
+ChambreEleve{chambre} to Chambre,
+Eleve{chambreEleve} to ChambreEleve,
+Classe{serie} to Serie,
+ClasseEleve{Classe} to Classe,
+EnseignantTitulaire{classe} to Classe,
+ProjetPedagogique{classe} to Classe,
+ClasseEleve{eleve} to Eleve,
+Eleve{compte} to Compte,
+Cours{matiere} to Matiere,
+Cours{classe} to Classe,
+Cours{enseignant} to Enseignant,
+Deliberation{eleve} to Eleve,
+Droit{fonctionnalite} to Fonctionnalite,
+Droit{groupeUtilisateur} to GroupeUtilisateur,
+Eleve{religion} to Religion,
+StatutEleve{eleve} to Eleve,
+VersementEleve{eleve} to Eleve,
+Parent{eleve} to Eleve,
+Enseignant{personnel} to Personnel,
+Epreuve{typeEpreuve} to TypeEpreuve,
+Utilisateur{groupeUtilisateur} to GroupeUtilisateur,
+LoginAction{utilisateur} to Utilisateur,
+LoginConnexion{utilisateur} to Utilisateur,
+MatiereClasse{classe} to Classe,
+MatiereClasse{matiere} to Matiere,
+Moratoire{typeMoratoire} to TypeMoratoire,
+Note{sequence} to Sequence,
+Operation{typeOperation} to TypeOperation,
+PaiementPersonnel{operation} to Operation,
+TransactionDiverses{operation} to Operation,
+VersementEleve{operation} to Operation,
+PaiementPersonnel{personnel} to Personnel,
+Personnel{utilisateur} to Utilisateur,
+Personnel{typePersonnel} to TypePersonnel,
+TrancheHoraire{typeTrancheHoraire} to TypeTrancheHoraire,
+StatutEleve{statut} to Statut,
+TransactionDiverses{operation} to Operation
+}
+relationship OneToMany{
+Eleve{absenceEleve} to AbsenceEleve{eleve},
+Enseignant{absenceEnseignant} to AbsenceEnseignant{enseignant},
+AgentAdministratif{fichier} to Fichier{agentAdministratif},
+AgentAdministratif{deliberation} to Deliberation{agentAdministratif},
+Personnel{absencePersonnel} to AbsencePersonnel{personnel},
+Eleve{bourse} to Bourse{eleve},
+Niveau{classe} to Classe{niveau},
+Cours{epreuve} to Epreuve{cours},
+Cours{note} to Note{cours},
+Section{cycle} to Cycle{section},
+Cycle{niveau} to Niveau{cycle},
+AgentAdministratif{deliberation} to Deliberation{agentAdministratif},
+Eleve{moratoire} to Moratoire{eleve},
+Eleve{fichier} to Fichier{eleve},
+Enseignant{vacation} to Vacation{enseignant},
+Enseignant{fichier} to Fichier{enseignant},
+Enseignant{projetPedagogique} to ProjetPedagogique{enseigant},
+Enseignant{deliberation} to Deliberation{enseignant},
+RegimePension{tranche} to Tranche{regimePension},
+Trimestre{sequence} to Sequence{trimestre}
+}

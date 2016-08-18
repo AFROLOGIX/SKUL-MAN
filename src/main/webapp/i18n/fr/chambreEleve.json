@@ -1,0 +1,23 @@
+{
+    "skulmanApp": {
+        "chambreEleve" : {
+            "home": {
+                "title": "ChambreEleves",
+                "createLabel": "Créer un nouveau Chambre Eleve",
+                "createOrEditLabel": "Créer ou éditer un Chambre Eleve",
+                "search": "Recherche pour Chambre Eleve"
+            },
+            "created": "Un nouveau Chambre Eleve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Chambre Eleve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Chambre Eleve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Chambre Eleve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Chambre Eleve"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "chambre": "Chambre"
+        }
+    }
+}

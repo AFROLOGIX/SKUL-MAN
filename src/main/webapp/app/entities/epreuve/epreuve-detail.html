@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span translate="skulmanApp.epreuve.detail.title">Epreuve</span> {{vm.epreuve.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.epreuve.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.epreuve.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.epreuve.typeEpreuve">Type Epreuve</span></dt>
+        <dd>
+            <a ui-sref="type-epreuve-detail({id:vm.epreuve.typeEpreuve.id})">{{vm.epreuve.typeEpreuve.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.epreuve.cours">Cours</span></dt>
+        <dd>
+            <a ui-sref="cours-detail({id:vm.epreuve.cours.id})">{{vm.epreuve.cours.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="epreuve-detail.edit({id:vm.epreuve.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

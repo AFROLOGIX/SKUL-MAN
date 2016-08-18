@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity MatiereClasse.
+    -->
+    <changeSet id="20160818210923-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="classe_id"
+                                 baseTableName="matiere_classe"
+                                 constraintName="fk_matiereclasse_classe_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="classe"/>
+
+        <addForeignKeyConstraint baseColumnNames="matiere_id"
+                                 baseTableName="matiere_classe"
+                                 constraintName="fk_matiereclasse_matiere_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="matiere"/>
+
+    </changeSet>
+</databaseChangeLog>

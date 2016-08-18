@@ -1,0 +1,27 @@
+{
+    "skulmanApp": {
+        "vacation" : {
+            "home": {
+                "title": "Vacations",
+                "createLabel": "Créer un nouveau Vacation",
+                "createOrEditLabel": "Créer ou éditer un Vacation",
+                "search": "Recherche pour Vacation"
+            },
+            "created": "Un nouveau Vacation a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Vacation avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Vacation avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Vacation {{ id }} ?"
+            },
+            "detail": {
+                "title": "Vacation"
+            },
+            "type": "Type",
+            "date": "Date",
+            "periode": "Periode",
+            "classe": "Classe",
+            "anneeScolaire": "Annee Scolaire",
+            "enseignant": "Enseignant"
+        }
+    }
+}

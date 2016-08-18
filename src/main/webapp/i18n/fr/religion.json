@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "religion" : {
+            "home": {
+                "title": "Religions",
+                "createLabel": "Créer un nouveau Religion",
+                "createOrEditLabel": "Créer ou éditer un Religion",
+                "search": "Recherche pour Religion"
+            },
+            "created": "Un nouveau Religion a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Religion avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Religion avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Religion {{ id }} ?"
+            },
+            "detail": {
+                "title": "Religion"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

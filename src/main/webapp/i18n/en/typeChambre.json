@@ -1,0 +1,25 @@
+{
+    "skulmanApp": {
+        "typeChambre" : {
+            "home": {
+                "title": "Type Chambres",
+                "createLabel": "Create a new Type Chambre",
+                "createOrEditLabel": "Create or edit a Type Chambre",
+                "search": "Search for Type Chambre"
+            },
+            "created": "A new Type Chambre is created with identifier {{ param }}",
+            "updated": "A Type Chambre is updated with identifier {{ param }}",
+            "deleted": "A Type Chambre is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Type Chambre {{ id }}?"
+            },
+            "detail": {
+                "title": "Type Chambre"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "montant": "Montant"
+        }
+    }
+}

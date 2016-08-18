@@ -1,0 +1,28 @@
+{
+    "skulmanApp": {
+        "tranche" : {
+            "home": {
+                "title": "Tranches",
+                "createLabel": "Créer un nouveau Tranche",
+                "createOrEditLabel": "Créer ou éditer un Tranche",
+                "search": "Recherche pour Tranche"
+            },
+            "created": "Un nouveau Tranche a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Tranche avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Tranche avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Tranche {{ id }} ?"
+            },
+            "detail": {
+                "title": "Tranche"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "numero": "Numero",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin",
+            "regimePension": "Regime Pension"
+        }
+    }
+}

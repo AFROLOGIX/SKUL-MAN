@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span translate="skulmanApp.projetPedagogique.detail.title">Projet Pedagogique</span> {{vm.projetPedagogique.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.projetPedagogique.elementProg">Element Prog</span></dt>
+        <dd>
+            <span>{{vm.projetPedagogique.elementProg}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.projetPedagogique.volumeHoraire">Volume Horaire</span></dt>
+        <dd>
+            <span>{{vm.projetPedagogique.volumeHoraire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.projetPedagogique.dateDeb">Date Deb</span></dt>
+        <dd>
+            <span>{{vm.projetPedagogique.dateDeb | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.projetPedagogique.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{vm.projetPedagogique.dateFin | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.projetPedagogique.status">Status</span></dt>
+        <dd>
+            <span>{{vm.projetPedagogique.status}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.projetPedagogique.classe">Classe</span></dt>
+        <dd>
+            <a ui-sref="classe-detail({id:vm.projetPedagogique.classe.id})">{{vm.projetPedagogique.classe.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.projetPedagogique.enseigant">Enseigant</span></dt>
+        <dd>
+            <a ui-sref="enseignant-detail({id:vm.projetPedagogique.enseigant.id})">{{vm.projetPedagogique.enseigant.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="projet-pedagogique-detail.edit({id:vm.projetPedagogique.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

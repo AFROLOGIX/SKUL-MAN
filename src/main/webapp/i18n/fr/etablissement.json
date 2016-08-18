@@ -1,0 +1,37 @@
+{
+    "skulmanApp": {
+        "etablissement" : {
+            "home": {
+                "title": "Etablissements",
+                "createLabel": "Créer un nouveau Etablissement",
+                "createOrEditLabel": "Créer ou éditer un Etablissement",
+                "search": "Recherche pour Etablissement"
+            },
+            "created": "Un nouveau Etablissement a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Etablissement avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Etablissement avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Etablissement {{ id }} ?"
+            },
+            "detail": {
+                "title": "Etablissement"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "dateCreation": "Date Creation",
+            "titreResponsable": "Titre Responsable",
+            "ville": "Ville",
+            "nomReponsable": "Nom Reponsable",
+            "siteWeb": "Site Web",
+            "cheminLogo": "Chemin Logo",
+            "nbTrimestre": "Nb Trimestre",
+            "nbSequence": "Nb Sequence",
+            "bp": "Bp",
+            "localisation": "Localisation",
+            "tel": "Tel",
+            "email": "Email",
+            "devise": "Devise"
+        }
+    }
+}

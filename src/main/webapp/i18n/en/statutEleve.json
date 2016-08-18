@@ -1,0 +1,25 @@
+{
+    "skulmanApp": {
+        "statutEleve" : {
+            "home": {
+                "title": "Statut Eleves",
+                "createLabel": "Create a new Statut Eleve",
+                "createOrEditLabel": "Create or edit a Statut Eleve",
+                "search": "Search for Statut Eleve"
+            },
+            "created": "A new Statut Eleve is created with identifier {{ param }}",
+            "updated": "A Statut Eleve is updated with identifier {{ param }}",
+            "deleted": "A Statut Eleve is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Statut Eleve {{ id }}?"
+            },
+            "detail": {
+                "title": "Statut Eleve"
+            },
+            "redouble": "Redouble",
+            "anneeScolaire": "Annee Scolaire",
+            "eleve": "Eleve",
+            "statut": "Statut"
+        }
+    }
+}

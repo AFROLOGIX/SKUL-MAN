@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "paiementPersonnel" : {
+            "home": {
+                "title": "PaiementPersonnels",
+                "createLabel": "Créer un nouveau Paiement Personnel",
+                "createOrEditLabel": "Créer ou éditer un Paiement Personnel",
+                "search": "Recherche pour Paiement Personnel"
+            },
+            "created": "Un nouveau Paiement Personnel a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Paiement Personnel avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Paiement Personnel avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Paiement Personnel {{ id }} ?"
+            },
+            "detail": {
+                "title": "Paiement Personnel"
+            },
+            "montant": "Montant",
+            "dette": "Dette",
+            "anneeScolaire": "Annee Scolaire",
+            "periode": "Periode",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "agentAdministratif": "Agent Administratif",
+            "operation": "Operation",
+            "personnel": "Personnel"
+        }
+    }
+}

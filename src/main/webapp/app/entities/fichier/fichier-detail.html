@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="skulmanApp.fichier.detail.title">Fichier</span> {{vm.fichier.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.fichier.type">Type</span></dt>
+        <dd>
+            <span>{{vm.fichier.type}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.fichier.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.fichier.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.emplacement">Emplacement</span></dt>
+        <dd>
+            <span>{{vm.fichier.emplacement}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.fichier.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.fichier.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.fichier.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.fichier.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.agentAdministratif">Agent Administratif</span></dt>
+        <dd>
+            <a ui-sref="agent-administratif-detail({id:vm.fichier.agentAdministratif.id})">{{vm.fichier.agentAdministratif.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.eleve">Eleve</span></dt>
+        <dd>
+            <a ui-sref="eleve-detail({id:vm.fichier.eleve.id})">{{vm.fichier.eleve.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.fichier.enseignant">Enseignant</span></dt>
+        <dd>
+            <a ui-sref="enseignant-detail({id:vm.fichier.enseignant.id})">{{vm.fichier.enseignant.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="fichier-detail.edit({id:vm.fichier.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="skulmanApp.evenement.detail.title">Evenement</span> {{vm.evenement.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.evenement.code">Code</span></dt>
+        <dd>
+            <span>{{vm.evenement.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.evenement.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.evenement.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.evenement.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.evenement.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.evenement.dateDeb">Date Deb</span></dt>
+        <dd>
+            <span>{{vm.evenement.dateDeb | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.evenement.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{vm.evenement.dateFin | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.evenement.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.evenement.anneeScolaire}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="evenement-detail.edit({id:vm.evenement.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

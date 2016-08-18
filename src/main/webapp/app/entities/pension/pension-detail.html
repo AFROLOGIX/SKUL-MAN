@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="skulmanApp.pension.detail.title">Pension</span> {{vm.pension.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.pension.code">Code</span></dt>
+        <dd>
+            <span>{{vm.pension.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.pension.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.pension.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.pension.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.pension.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.pension.numero">Numero</span></dt>
+        <dd>
+            <span>{{vm.pension.numero}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.pension.dateDeb">Date Deb</span></dt>
+        <dd>
+            <span>{{vm.pension.dateDeb | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.pension.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{vm.pension.dateFin | date:'mediumDate'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pension-detail.edit({id:vm.pension.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

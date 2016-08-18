@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity PaiementPersonnel.
+    -->
+    <changeSet id="20160818210931-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="agent_administratif_id"
+                                 baseTableName="paiement_personnel"
+                                 constraintName="fk_paiementpersonnel_agentadministratif_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="agent_administratif"/>
+
+        <addForeignKeyConstraint baseColumnNames="operation_id"
+                                 baseTableName="paiement_personnel"
+                                 constraintName="fk_paiementpersonnel_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="operation"/>
+
+        <addForeignKeyConstraint baseColumnNames="personnel_id"
+                                 baseTableName="paiement_personnel"
+                                 constraintName="fk_paiementpersonnel_personnel_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="personnel"/>
+
+    </changeSet>
+</databaseChangeLog>

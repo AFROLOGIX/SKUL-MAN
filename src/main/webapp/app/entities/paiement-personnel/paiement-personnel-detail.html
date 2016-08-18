@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="skulmanApp.paiementPersonnel.detail.title">Paiement Personnel</span> {{vm.paiementPersonnel.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.paiementPersonnel.montant">Montant</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.montant}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.dette">Dette</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.dette}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.periode">Periode</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.periode}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.paiementPersonnel.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.agentAdministratif">Agent Administratif</span></dt>
+        <dd>
+            <a ui-sref="agent-administratif-detail({id:vm.paiementPersonnel.agentAdministratif.id})">{{vm.paiementPersonnel.agentAdministratif.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.operation">Operation</span></dt>
+        <dd>
+            <a ui-sref="operation-detail({id:vm.paiementPersonnel.operation.id})">{{vm.paiementPersonnel.operation.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.paiementPersonnel.personnel">Personnel</span></dt>
+        <dd>
+            <a ui-sref="personnel-detail({id:vm.paiementPersonnel.personnel.id})">{{vm.paiementPersonnel.personnel.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="paiement-personnel-detail.edit({id:vm.paiementPersonnel.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

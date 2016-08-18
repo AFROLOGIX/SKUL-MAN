@@ -1,0 +1,30 @@
+{
+    "skulmanApp": {
+        "absencePersonnel" : {
+            "home": {
+                "title": "Absence Personnels",
+                "createLabel": "Create a new Absence Personnel",
+                "createOrEditLabel": "Create or edit a Absence Personnel",
+                "search": "Search for Absence Personnel"
+            },
+            "created": "A new Absence Personnel is created with identifier {{ param }}",
+            "updated": "A Absence Personnel is updated with identifier {{ param }}",
+            "deleted": "A Absence Personnel is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Absence Personnel {{ id }}?"
+            },
+            "detail": {
+                "title": "Absence Personnel"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "periode": "Periode",
+            "justifiee": "Justifiee",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "jour": "Jour",
+            "personnel": "Personnel"
+        }
+    }
+}

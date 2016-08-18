@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "matiere" : {
+            "home": {
+                "title": "Matieres",
+                "createLabel": "Créer un nouveau Matiere",
+                "createOrEditLabel": "Créer ou éditer un Matiere",
+                "search": "Recherche pour Matiere"
+            },
+            "created": "Un nouveau Matiere a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Matiere avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Matiere avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Matiere {{ id }} ?"
+            },
+            "detail": {
+                "title": "Matiere"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span translate="skulmanApp.typePersonnel.detail.title">Type Personnel</span> {{vm.typePersonnel.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.typePersonnel.code">Code</span></dt>
+        <dd>
+            <span>{{vm.typePersonnel.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.typePersonnel.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.typePersonnel.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.typePersonnel.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.typePersonnel.libelleEn}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="type-personnel-detail.edit({id:vm.typePersonnel.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

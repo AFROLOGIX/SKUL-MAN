@@ -1,0 +1,25 @@
+{
+    "skulmanApp": {
+        "matiereClasse" : {
+            "home": {
+                "title": "MatiereClasses",
+                "createLabel": "Créer un nouveau Matiere Classe",
+                "createOrEditLabel": "Créer ou éditer un Matiere Classe",
+                "search": "Recherche pour Matiere Classe"
+            },
+            "created": "Un nouveau Matiere Classe a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Matiere Classe avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Matiere Classe avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Matiere Classe {{ id }} ?"
+            },
+            "detail": {
+                "title": "Matiere Classe"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "coef": "Coef",
+            "classe": "Classe",
+            "matiere": "Matiere"
+        }
+    }
+}

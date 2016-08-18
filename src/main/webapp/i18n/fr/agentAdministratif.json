@@ -1,0 +1,25 @@
+{
+    "skulmanApp": {
+        "agentAdministratif" : {
+            "home": {
+                "title": "AgentAdministratifs",
+                "createLabel": "Créer un nouveau Agent Administratif",
+                "createOrEditLabel": "Créer ou éditer un Agent Administratif",
+                "search": "Recherche pour Agent Administratif"
+            },
+            "created": "Un nouveau Agent Administratif a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Agent Administratif avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Agent Administratif avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Agent Administratif {{ id }} ?"
+            },
+            "detail": {
+                "title": "Agent Administratif"
+            },
+            "role": "Role",
+            "salaire": "Salaire",
+            "fichier": "Fichier",
+            "deliberation": "Deliberation"
+        }
+    }
+}

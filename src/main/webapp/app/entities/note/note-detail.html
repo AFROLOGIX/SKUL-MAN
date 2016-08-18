@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span translate="skulmanApp.note.detail.title">Note</span> {{vm.note.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.note.note">Note</span></dt>
+        <dd>
+            <span>{{vm.note.note}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.deleted">Deleted</span></dt>
+        <dd>
+            <span>{{vm.note.deleted}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.periodicite">Periodicite</span></dt>
+        <dd>
+            <span>{{vm.note.periodicite}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.note.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.note.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.note.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.note.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.note.sequence">Sequence</span></dt>
+        <dd>
+            <a ui-sref="sequence-detail({id:vm.note.sequence.id})">{{vm.note.sequence.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.note.cours">Cours</span></dt>
+        <dd>
+            <a ui-sref="cours-detail({id:vm.note.cours.id})">{{vm.note.cours.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="note-detail.edit({id:vm.note.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

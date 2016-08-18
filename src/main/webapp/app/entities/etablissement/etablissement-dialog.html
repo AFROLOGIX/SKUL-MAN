@@ -1,0 +1,224 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEtablissementLabel" translate="skulmanApp.etablissement.home.createOrEditLabel">Create or edit a Etablissement</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.etablissement.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.etablissement.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.code" for="field_code">Code</label>
+            <input type="text" class="form-control" name="code" id="field_code"
+                    ng-model="vm.etablissement.code"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.code.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.code.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.libelleFr" for="field_libelleFr">Libelle Fr</label>
+            <input type="text" class="form-control" name="libelleFr" id="field_libelleFr"
+                    ng-model="vm.etablissement.libelleFr"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.libelleFr.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.libelleFr.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.libelleEn" for="field_libelleEn">Libelle En</label>
+            <input type="text" class="form-control" name="libelleEn" id="field_libelleEn"
+                    ng-model="vm.etablissement.libelleEn"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.libelleEn.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.libelleEn.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.dateCreation" for="field_dateCreation">Date Creation</label>
+                <div class="input-group">
+                    <input id="field_dateCreation" type="text" class="form-control" name="dateCreation" uib-datepicker-popup="{{dateformat}}" ng-model="vm.etablissement.dateCreation" is-open="vm.datePickerOpenStatus.dateCreation"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateCreation')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.titreResponsable" for="field_titreResponsable">Titre Responsable</label>
+            <input type="text" class="form-control" name="titreResponsable" id="field_titreResponsable"
+                    ng-model="vm.etablissement.titreResponsable"
+                    ng-maxlength="75" />
+            <div ng-show="editForm.titreResponsable.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.titreResponsable.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="75">
+                    This field cannot be longer than 75 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.ville" for="field_ville">Ville</label>
+            <input type="text" class="form-control" name="ville" id="field_ville"
+                    ng-model="vm.etablissement.ville"
+                    ng-maxlength="75" />
+            <div ng-show="editForm.ville.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.ville.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="75">
+                    This field cannot be longer than 75 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.nomReponsable" for="field_nomReponsable">Nom Reponsable</label>
+            <input type="text" class="form-control" name="nomReponsable" id="field_nomReponsable"
+                    ng-model="vm.etablissement.nomReponsable"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.nomReponsable.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nomReponsable.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.siteWeb" for="field_siteWeb">Site Web</label>
+            <input type="text" class="form-control" name="siteWeb" id="field_siteWeb"
+                    ng-model="vm.etablissement.siteWeb"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.siteWeb.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.siteWeb.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.cheminLogo" for="field_cheminLogo">Chemin Logo</label>
+            <input type="text" class="form-control" name="cheminLogo" id="field_cheminLogo"
+                    ng-model="vm.etablissement.cheminLogo"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.cheminLogo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cheminLogo.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.nbTrimestre" for="field_nbTrimestre">Nb Trimestre</label>
+            <input type="number" class="form-control" name="nbTrimestre" id="field_nbTrimestre"
+                    ng-model="vm.etablissement.nbTrimestre"
+                    max="10" />
+            <div ng-show="editForm.nbTrimestre.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nbTrimestre.$error.max" translate="entity.validation.max" translate-value-max="10">
+                    This field cannot be more than 10.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nbTrimestre.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.nbSequence" for="field_nbSequence">Nb Sequence</label>
+            <input type="number" class="form-control" name="nbSequence" id="field_nbSequence"
+                    ng-model="vm.etablissement.nbSequence"
+                    max="10" />
+            <div ng-show="editForm.nbSequence.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nbSequence.$error.max" translate="entity.validation.max" translate-value-max="10">
+                    This field cannot be more than 10.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nbSequence.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.bp" for="field_bp">Bp</label>
+            <input type="text" class="form-control" name="bp" id="field_bp"
+                    ng-model="vm.etablissement.bp"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.bp.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.bp.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.localisation" for="field_localisation">Localisation</label>
+            <input type="text" class="form-control" name="localisation" id="field_localisation"
+                    ng-model="vm.etablissement.localisation"
+                    ng-maxlength="200" />
+            <div ng-show="editForm.localisation.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.localisation.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="200">
+                    This field cannot be longer than 200 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.tel" for="field_tel">Tel</label>
+            <input type="text" class="form-control" name="tel" id="field_tel"
+                    ng-model="vm.etablissement.tel"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.tel.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tel.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.etablissement.email"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.email.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.email.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.etablissement.devise" for="field_devise">Devise</label>
+            <input type="text" class="form-control" name="devise" id="field_devise"
+                    ng-model="vm.etablissement.devise"
+                    ng-maxlength="100" />
+            <div ng-show="editForm.devise.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.devise.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="100">
+                    This field cannot be longer than 100 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,30 @@
+{
+    "skulmanApp": {
+        "absenceEnseignant" : {
+            "home": {
+                "title": "AbsenceEnseignants",
+                "createLabel": "Créer un nouveau Absence Enseignant",
+                "createOrEditLabel": "Créer ou éditer un Absence Enseignant",
+                "search": "Recherche pour Absence Enseignant"
+            },
+            "created": "Un nouveau Absence Enseignant a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Absence Enseignant avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Absence Enseignant avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Absence Enseignant {{ id }} ?"
+            },
+            "detail": {
+                "title": "Absence Enseignant"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "plageHoraire": "Plage Horaire",
+            "justifiee": "Justifiee",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "jour": "Jour",
+            "enseignant": "Enseignant"
+        }
+    }
+}

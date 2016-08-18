@@ -1,0 +1,24 @@
+{
+    "skulmanApp": {
+        "motifExclusion" : {
+            "home": {
+                "title": "MotifExclusions",
+                "createLabel": "Créer un nouveau Motif Exclusion",
+                "createOrEditLabel": "Créer ou éditer un Motif Exclusion",
+                "search": "Recherche pour Motif Exclusion"
+            },
+            "created": "Un nouveau Motif Exclusion a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Motif Exclusion avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Motif Exclusion avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Motif Exclusion {{ id }} ?"
+            },
+            "detail": {
+                "title": "Motif Exclusion"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En"
+        }
+    }
+}

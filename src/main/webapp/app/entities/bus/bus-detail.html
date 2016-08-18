@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span translate="skulmanApp.bus.detail.title">Bus</span> {{vm.bus.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.bus.immatriculation">Immatriculation</span></dt>
+        <dd>
+            <span>{{vm.bus.immatriculation}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.bus.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.bus.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.capacite">Capacite</span></dt>
+        <dd>
+            <span>{{vm.bus.capacite}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.marque">Marque</span></dt>
+        <dd>
+            <span>{{vm.bus.marque}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.dateAcquisition">Date Acquisition</span></dt>
+        <dd>
+            <span>{{vm.bus.dateAcquisition | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.isActive">Is Active</span></dt>
+        <dd>
+            <span>{{vm.bus.isActive}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.bus.tarifBus">Tarif Bus</span></dt>
+        <dd>
+            <a ui-sref="tarif-bus-detail({id:vm.bus.tarifBus.id})">{{vm.bus.tarifBus.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="bus-detail.edit({id:vm.bus.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

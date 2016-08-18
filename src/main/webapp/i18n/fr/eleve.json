@@ -1,0 +1,41 @@
+{
+    "skulmanApp": {
+        "eleve" : {
+            "home": {
+                "title": "Eleves",
+                "createLabel": "Créer un nouveau Eleve",
+                "createOrEditLabel": "Créer ou éditer un Eleve",
+                "search": "Recherche pour Eleve"
+            },
+            "created": "Un nouveau Eleve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Eleve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Eleve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Eleve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Eleve"
+            },
+            "matricule": "Matricule",
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "dateNaiss": "Date Naiss",
+            "lieuNaiss": "Lieu Naiss",
+            "sexe": "Sexe",
+            "tel": "Tel",
+            "nationalite": "Nationalite",
+            "email": "Email",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "chambreEleve": "Chambre Eleve",
+            "compte": "Compte",
+            "religion": "Religion",
+            "absenceEleve": "Absence Eleve",
+            "bourse": "Bourse",
+            "moratoire": "Moratoire",
+            "fichier": "Fichier"
+        }
+    }
+}

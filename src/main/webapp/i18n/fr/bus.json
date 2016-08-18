@@ -1,0 +1,29 @@
+{
+    "skulmanApp": {
+        "bus" : {
+            "home": {
+                "title": "Buses",
+                "createLabel": "Créer un nouveau Bus",
+                "createOrEditLabel": "Créer ou éditer un Bus",
+                "search": "Recherche pour Bus"
+            },
+            "created": "Un nouveau Bus a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Bus avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Bus avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Bus {{ id }} ?"
+            },
+            "detail": {
+                "title": "Bus"
+            },
+            "immatriculation": "Immatriculation",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "capacite": "Capacite",
+            "marque": "Marque",
+            "dateAcquisition": "Date Acquisition",
+            "isActive": "Is Active",
+            "tarifBus": "Tarif Bus"
+        }
+    }
+}

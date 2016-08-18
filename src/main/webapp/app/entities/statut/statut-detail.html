@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span translate="skulmanApp.statut.detail.title">Statut</span> {{vm.statut.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.statut.code">Code</span></dt>
+        <dd>
+            <span>{{vm.statut.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.statut.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.statut.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.statut.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.statut.libelleEn}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="statut-detail.edit({id:vm.statut.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

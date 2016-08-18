@@ -1,0 +1,71 @@
+
+<div>
+    <h2><span translate="skulmanApp.parent.detail.title">Parent</span> {{vm.parent.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.parent.nomCompletPere">Nom Complet Pere</span></dt>
+        <dd>
+            <span>{{vm.parent.nomCompletPere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.nomCompletMere">Nom Complet Mere</span></dt>
+        <dd>
+            <span>{{vm.parent.nomCompletMere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.emailPere">Email Pere</span></dt>
+        <dd>
+            <span>{{vm.parent.emailPere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.emailMere">Email Mere</span></dt>
+        <dd>
+            <span>{{vm.parent.emailMere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.telPere">Tel Pere</span></dt>
+        <dd>
+            <span>{{vm.parent.telPere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.telMere">Tel Mere</span></dt>
+        <dd>
+            <span>{{vm.parent.telMere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.professionPere">Profession Pere</span></dt>
+        <dd>
+            <span>{{vm.parent.professionPere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.professionMere">Profession Mere</span></dt>
+        <dd>
+            <span>{{vm.parent.professionMere}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.nomCompletTuteur">Nom Complet Tuteur</span></dt>
+        <dd>
+            <span>{{vm.parent.nomCompletTuteur}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.emailTuteur">Email Tuteur</span></dt>
+        <dd>
+            <span>{{vm.parent.emailTuteur}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.telTuteur">Tel Tuteur</span></dt>
+        <dd>
+            <span>{{vm.parent.telTuteur}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.professionTuteur">Profession Tuteur</span></dt>
+        <dd>
+            <span>{{vm.parent.professionTuteur}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.parent.eleve">Eleve</span></dt>
+        <dd>
+            <a ui-sref="eleve-detail({id:vm.parent.eleve.id})">{{vm.parent.eleve.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="parent-detail.edit({id:vm.parent.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

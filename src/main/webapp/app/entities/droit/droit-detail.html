@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span translate="skulmanApp.droit.detail.title">Droit</span> {{vm.droit.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.droit.code">Code</span></dt>
+        <dd>
+            <span>{{vm.droit.code}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.droit.libelleFr">Libelle Fr</span></dt>
+        <dd>
+            <span>{{vm.droit.libelleFr}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.droit.libelleEn">Libelle En</span></dt>
+        <dd>
+            <span>{{vm.droit.libelleEn}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.droit.fonctionnalite">Fonctionnalite</span></dt>
+        <dd>
+            <a ui-sref="fonctionnalite-detail({id:vm.droit.fonctionnalite.id})">{{vm.droit.fonctionnalite.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.droit.groupeUtilisateur">Groupe Utilisateur</span></dt>
+        <dd>
+            <a ui-sref="groupe-utilisateur-detail({id:vm.droit.groupeUtilisateur.id})">{{vm.droit.groupeUtilisateur.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="droit-detail.edit({id:vm.droit.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

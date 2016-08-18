@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span translate="skulmanApp.absenceEnseignant.detail.title">Absence Enseignant</span> {{vm.absenceEnseignant.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="skulmanApp.absenceEnseignant.anneeScolaire">Annee Scolaire</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.anneeScolaire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.plageHoraire">Plage Horaire</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.plageHoraire}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.justifiee">Justifiee</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.justifiee}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.createBy">Create By</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.createBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.updateBy">Update By</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.updateBy}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.createAt">Create At</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.createAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.updateAt">Update At</span></dt>
+        <dd>
+            <span>{{vm.absenceEnseignant.updateAt | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.jour">Jour</span></dt>
+        <dd>
+            <a ui-sref="jour-detail({id:vm.absenceEnseignant.jour.id})">{{vm.absenceEnseignant.jour.id}}</a>
+        </dd>
+        <dt><span translate="skulmanApp.absenceEnseignant.enseignant">Enseignant</span></dt>
+        <dd>
+            <a ui-sref="enseignant-detail({id:vm.absenceEnseignant.enseignant.id})">{{vm.absenceEnseignant.enseignant.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="absence-enseignant-detail.edit({id:vm.absenceEnseignant.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

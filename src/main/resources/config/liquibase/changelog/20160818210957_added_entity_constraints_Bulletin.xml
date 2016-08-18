@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Bulletin.
+    -->
+    <changeSet id="20160818210957-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="eleve_id"
+                                 baseTableName="bulletin"
+                                 constraintName="fk_bulletin_eleve_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="eleve"/>
+
+        <addForeignKeyConstraint baseColumnNames="sequence_id"
+                                 baseTableName="bulletin"
+                                 constraintName="fk_bulletin_sequence_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="sequence"/>
+
+    </changeSet>
+</databaseChangeLog>

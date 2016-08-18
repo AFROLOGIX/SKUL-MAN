@@ -1,0 +1,27 @@
+{
+    "skulmanApp": {
+        "anneeScolaire" : {
+            "home": {
+                "title": "AnneeScolaires",
+                "createLabel": "Créer un nouveau Annee Scolaire",
+                "createOrEditLabel": "Créer ou éditer un Annee Scolaire",
+                "search": "Recherche pour Annee Scolaire"
+            },
+            "created": "Un nouveau Annee Scolaire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Annee Scolaire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Annee Scolaire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Annee Scolaire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Annee Scolaire"
+            },
+            "annee": "Annee",
+            "codeAnnee": "Code Annee",
+            "dateDeb": "Date Deb",
+            "dateFin": "Date Fin",
+            "isActive": "Is Active",
+            "objectifs": "Objectifs"
+        }
+    }
+}

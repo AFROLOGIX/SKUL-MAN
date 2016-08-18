@@ -1,0 +1,34 @@
+{
+    "skulmanApp": {
+        "optionBulletinNote" : {
+            "home": {
+                "title": "OptionBulletinNotes",
+                "createLabel": "Créer un nouveau Option Bulletin Note",
+                "createOrEditLabel": "Créer ou éditer un Option Bulletin Note",
+                "search": "Recherche pour Option Bulletin Note"
+            },
+            "created": "Un nouveau Option Bulletin Note a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Option Bulletin Note avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Option Bulletin Note avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Option Bulletin Note {{ id }} ?"
+            },
+            "detail": {
+                "title": "Option Bulletin Note"
+            },
+            "nomEnseignant": "Nom Enseignant",
+            "coef": "Coef",
+            "noteMin": "Note Min",
+            "noteMax": "Note Max",
+            "rangMatiere": "Rang Matiere",
+            "moyenneMatiere": "Moyenne Matiere",
+            "appreciation": "Appreciation",
+            "moyenneGeneraleClasse": "Moyenne Generale Classe",
+            "groupeMatiere": "Groupe Matiere",
+            "photo": "Photo",
+            "totalEleve": "Total Eleve",
+            "afficherSanction": "Afficher Sanction",
+            "afficherMatricule": "Afficher Matricule"
+        }
+    }
+}

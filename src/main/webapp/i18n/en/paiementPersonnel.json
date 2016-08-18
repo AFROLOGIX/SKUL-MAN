@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "paiementPersonnel" : {
+            "home": {
+                "title": "Paiement Personnels",
+                "createLabel": "Create a new Paiement Personnel",
+                "createOrEditLabel": "Create or edit a Paiement Personnel",
+                "search": "Search for Paiement Personnel"
+            },
+            "created": "A new Paiement Personnel is created with identifier {{ param }}",
+            "updated": "A Paiement Personnel is updated with identifier {{ param }}",
+            "deleted": "A Paiement Personnel is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Paiement Personnel {{ id }}?"
+            },
+            "detail": {
+                "title": "Paiement Personnel"
+            },
+            "montant": "Montant",
+            "dette": "Dette",
+            "anneeScolaire": "Annee Scolaire",
+            "periode": "Periode",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "agentAdministratif": "Agent Administratif",
+            "operation": "Operation",
+            "personnel": "Personnel"
+        }
+    }
+}

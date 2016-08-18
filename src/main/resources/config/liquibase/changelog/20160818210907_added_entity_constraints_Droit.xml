@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Droit.
+    -->
+    <changeSet id="20160818210907-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="fonctionnalite_id"
+                                 baseTableName="droit"
+                                 constraintName="fk_droit_fonctionnalite_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fonctionnalite"/>
+
+        <addForeignKeyConstraint baseColumnNames="groupe_utilisateur_id"
+                                 baseTableName="droit"
+                                 constraintName="fk_droit_groupeutilisateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="groupe_utilisateur"/>
+
+    </changeSet>
+</databaseChangeLog>

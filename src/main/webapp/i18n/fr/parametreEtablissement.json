@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "parametreEtablissement" : {
+            "home": {
+                "title": "ParametreEtablissements",
+                "createLabel": "Créer un nouveau Parametre Etablissement",
+                "createOrEditLabel": "Créer ou éditer un Parametre Etablissement",
+                "search": "Recherche pour Parametre Etablissement"
+            },
+            "created": "Un nouveau Parametre Etablissement a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Parametre Etablissement avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Parametre Etablissement avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Parametre Etablissement {{ id }} ?"
+            },
+            "detail": {
+                "title": "Parametre Etablissement"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "activerEnregistrementBulletinNoteBd": "Activer Enregistrement Bulletin Note Bd",
+            "heureDebCours": "Heure Deb Cours",
+            "heureFinCours": "Heure Fin Cours",
+            "regime": "Regime"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "classeEleve" : {
+            "home": {
+                "title": "ClasseEleves",
+                "createLabel": "Créer un nouveau Classe Eleve",
+                "createOrEditLabel": "Créer ou éditer un Classe Eleve",
+                "search": "Recherche pour Classe Eleve"
+            },
+            "created": "Un nouveau Classe Eleve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Classe Eleve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Classe Eleve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Classe Eleve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Classe Eleve"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "isActive": "Is Active",
+            "observation": "Observation",
+            "classe": "Classe",
+            "eleve": "Eleve"
+        }
+    }
+}

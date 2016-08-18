@@ -1,0 +1,22 @@
+{
+    "skulmanApp": {
+        "formatMatricule" : {
+            "home": {
+                "title": "Format Matricules",
+                "createLabel": "Create a new Format Matricule",
+                "createOrEditLabel": "Create or edit a Format Matricule",
+                "search": "Search for Format Matricule"
+            },
+            "created": "A new Format Matricule is created with identifier {{ param }}",
+            "updated": "A Format Matricule is updated with identifier {{ param }}",
+            "deleted": "A Format Matricule is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Format Matricule {{ id }}?"
+            },
+            "detail": {
+                "title": "Format Matricule"
+            },
+            "format": "Format"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "appreciation" : {
+            "home": {
+                "title": "Appreciations",
+                "createLabel": "Create a new Appreciation",
+                "createOrEditLabel": "Create or edit a Appreciation",
+                "search": "Search for Appreciation"
+            },
+            "created": "A new Appreciation is created with identifier {{ param }}",
+            "updated": "A Appreciation is updated with identifier {{ param }}",
+            "deleted": "A Appreciation is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Appreciation {{ id }}?"
+            },
+            "detail": {
+                "title": "Appreciation"
+            },
+            "code": "Code",
+            "libelleFr": "Libelle Fr",
+            "libelleEn": "Libelle En",
+            "minNote": "Min Note",
+            "maxNote": "Max Note"
+        }
+    }
+}

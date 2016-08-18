@@ -1,0 +1,98 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLoginConnexionLabel" translate="skulmanApp.loginConnexion.home.createOrEditLabel">Create or edit a Login Connexion</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.loginConnexion.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.loginConnexion.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.loginConnexion.role" for="field_role">Role</label>
+            <input type="text" class="form-control" name="role" id="field_role"
+                    ng-model="vm.loginConnexion.role"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.role.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.role.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.loginConnexion.loginTime" for="field_loginTime">Login Time</label>
+                <div class="input-group">
+                    <input id="field_loginTime" type="text" class="form-control" name="loginTime" datetime-picker="{{dateformat}}" ng-model="vm.loginConnexion.loginTime" is-open="vm.datePickerOpenStatus.loginTime"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('loginTime')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.loginConnexion.status" for="field_status">Status</label>
+            <input type="checkbox" class="form-control" name="status" id="field_status"
+                    ng-model="vm.loginConnexion.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.loginConnexion.addressIp" for="field_addressIp">Address Ip</label>
+            <input type="text" class="form-control" name="addressIp" id="field_addressIp"
+                    ng-model="vm.loginConnexion.addressIp"
+                    ng-maxlength="50" />
+            <div ng-show="editForm.addressIp.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.addressIp.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="50">
+                    This field cannot be longer than 50 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.loginConnexion.nbEchecs" for="field_nbEchecs">Nb Echecs</label>
+            <input type="number" class="form-control" name="nbEchecs" id="field_nbEchecs"
+                    ng-model="vm.loginConnexion.nbEchecs"
+                    max="10000" />
+            <div ng-show="editForm.nbEchecs.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nbEchecs.$error.max" translate="entity.validation.max" translate-value-max="10000">
+                    This field cannot be more than 10000.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nbEchecs.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="skulmanApp.loginConnexion.dateEchec" for="field_dateEchec">Date Echec</label>
+                <div class="input-group">
+                    <input id="field_dateEchec" type="text" class="form-control" name="dateEchec" datetime-picker="{{dateformat}}" ng-model="vm.loginConnexion.dateEchec" is-open="vm.datePickerOpenStatus.dateEchec"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dateEchec')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="skulmanApp.loginConnexion.utilisateur" for="field_utilisateur">Utilisateur</label>
+            <select class="form-control" id="field_utilisateur" name="utilisateur" ng-model="vm.loginConnexion.utilisateur" ng-options="utilisateur as utilisateur.id for utilisateur in vm.utilisateurs | orderBy:'id' track by utilisateur.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

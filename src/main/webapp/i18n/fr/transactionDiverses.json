@@ -1,0 +1,26 @@
+{
+    "skulmanApp": {
+        "transactionDiverses" : {
+            "home": {
+                "title": "TransactionDiverses",
+                "createLabel": "Créer un nouveau Transaction Diverses",
+                "createOrEditLabel": "Créer ou éditer un Transaction Diverses",
+                "search": "Recherche pour Transaction Diverses"
+            },
+            "created": "Un nouveau Transaction Diverses a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Transaction Diverses avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Transaction Diverses avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Transaction Diverses {{ id }} ?"
+            },
+            "detail": {
+                "title": "Transaction Diverses"
+            },
+            "typeUsager": "Type Usager",
+            "isCredit": "Is Credit",
+            "usagerId": "Usager Id",
+            "agentAdministratif": "Agent Administratif",
+            "operation": "Operation"
+        }
+    }
+}

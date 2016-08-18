@@ -1,0 +1,30 @@
+{
+    "skulmanApp": {
+        "absenceEleve" : {
+            "home": {
+                "title": "AbsenceEleves",
+                "createLabel": "Créer un nouveau Absence Eleve",
+                "createOrEditLabel": "Créer ou éditer un Absence Eleve",
+                "search": "Recherche pour Absence Eleve"
+            },
+            "created": "Un nouveau Absence Eleve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Absence Eleve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Absence Eleve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Absence Eleve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Absence Eleve"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "plageHoraire": "Plage Horaire",
+            "justifiee": "Justifiee",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "jour": "Jour",
+            "eleve": "Eleve"
+        }
+    }
+}

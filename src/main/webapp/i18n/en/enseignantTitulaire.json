@@ -1,0 +1,23 @@
+{
+    "skulmanApp": {
+        "enseignantTitulaire" : {
+            "home": {
+                "title": "Enseignant Titulaires",
+                "createLabel": "Create a new Enseignant Titulaire",
+                "createOrEditLabel": "Create or edit a Enseignant Titulaire",
+                "search": "Search for Enseignant Titulaire"
+            },
+            "created": "A new Enseignant Titulaire is created with identifier {{ param }}",
+            "updated": "A Enseignant Titulaire is updated with identifier {{ param }}",
+            "deleted": "A Enseignant Titulaire is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Enseignant Titulaire {{ id }}?"
+            },
+            "detail": {
+                "title": "Enseignant Titulaire"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "classe": "Classe"
+        }
+    }
+}

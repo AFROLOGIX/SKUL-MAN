@@ -1,0 +1,32 @@
+{
+    "skulmanApp": {
+        "versementEleve" : {
+            "home": {
+                "title": "VersementEleves",
+                "createLabel": "Créer un nouveau Versement Eleve",
+                "createOrEditLabel": "Créer ou éditer un Versement Eleve",
+                "search": "Recherche pour Versement Eleve"
+            },
+            "created": "Un nouveau Versement Eleve a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Versement Eleve avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Versement Eleve avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Versement Eleve {{ id }} ?"
+            },
+            "detail": {
+                "title": "Versement Eleve"
+            },
+            "anneeScolaire": "Annee Scolaire",
+            "periode": "Periode",
+            "montant": "Montant",
+            "dette": "Dette",
+            "createBy": "Create By",
+            "updateBy": "Update By",
+            "createAt": "Create At",
+            "updateAt": "Update At",
+            "agentAdministratif": "Agent Administratif",
+            "eleve": "Eleve",
+            "operation": "Operation"
+        }
+    }
+}

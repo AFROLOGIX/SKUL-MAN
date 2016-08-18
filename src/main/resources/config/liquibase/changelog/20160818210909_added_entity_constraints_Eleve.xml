@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Eleve.
+    -->
+    <changeSet id="20160818210909-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="chambre_eleve_id"
+                                 baseTableName="eleve"
+                                 constraintName="fk_eleve_chambreeleve_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="chambre_eleve"/>
+
+        <addForeignKeyConstraint baseColumnNames="compte_id"
+                                 baseTableName="eleve"
+                                 constraintName="fk_eleve_compte_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="compte"/>
+
+        <addForeignKeyConstraint baseColumnNames="religion_id"
+                                 baseTableName="eleve"
+                                 constraintName="fk_eleve_religion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="religion"/>
+
+    </changeSet>
+</databaseChangeLog>
